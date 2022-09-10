@@ -9,23 +9,21 @@ services - (9)
 contact form
 product description - text and map - (5)
 images grid - (5)
+map
 
 COMPLEX
 nav
+header
+footer
+filter select
 carousel
   full image carousel
   cards carousel
   text and cards carousel
   text and image carousel - (3)
-filter select
-header
-footer
-map
 
 PLAN
 1d - prep
-  tailwind
-  netlify
   colors
   images and fonts and icons
 send to k
