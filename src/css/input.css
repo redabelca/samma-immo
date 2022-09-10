@@ -5,3 +5,25 @@
 html, body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.container {
+  margin: 0 auto;
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1640px;
+  }
+}
+
+[aria-expanded="false"] #humburger {
+  display: block;
+}
+[aria-expanded="false"] #x-icon {
+  display: none;
+}
+[aria-expanded="true"] #humburger {
+  display: none;
+}
+[aria-expanded="true"] #x-icon {
+  display: block;
+}

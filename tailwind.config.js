@@ -8,6 +8,7 @@ module.exports = {
         lightBlue2: "#003D71A1",
         darkBlue: "#06559D",
         darkBlue2: "#003D71",
+        darkBlue3: "#0C294C",
       }
     }
   },
