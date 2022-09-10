@@ -1,7 +1,7 @@
 SIMPLE
 image and text
 card - (1,4)
-full image card
+  full image card
 blue contact-us before footer
 blog body
 services - (1)
