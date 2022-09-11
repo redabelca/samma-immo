@@ -15,6 +15,7 @@ html, body {
   }
 }
 
+/* HUMBURGER */
 [aria-expanded="false"] #humburger {
   display: block;
 }
@@ -27,3 +28,91 @@ html, body {
 [aria-expanded="true"] #x-icon {
   display: block;
 }
+/* END HUMBURGER */
+
+
+/* SELECT */
+.select-btn,
+li {
+  cursor: pointer;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  padding: 20px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper.active .content {
+  display: block;
+}
+
+.wrapper img {
+  transition: all .2s;
+}
+
+.wrapper.active img {
+  transform: rotateZ(180deg);
+}
+
+.content .search {
+  position: relative;
+}
+
+.search input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 1rem;
+  border: 1px solid #B3B3B3;
+}
+
+.search input:focus {
+  border: 2px solid #4285f4;
+}
+
+.search input::placeholder {
+  color: #bfbfbf;
+}
+
+.content .options {
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+
+.options::-webkit-scrollbar {
+  width: 7px;
+}
+
+.options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+}
+
+.options li {
+  font-weight: normal;
+  margin: .4rem 0;
+}
+
+.options li:hover,
+li.selected {
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+/* END SELECT */

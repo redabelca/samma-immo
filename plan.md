@@ -21,11 +21,14 @@ carousel
   cards carousel
   text and cards carousel
   text and image carousel - (3)
+  carousel on modal
 
 PLAN
-1d - prep
+jm3a - prep
   colors
   images and fonts and icons
-send to k
-k takes 10 comp
-me 9 comp 3 per day
+sbt - nav header footer
+lhd - filter-select
+tnin - apply-hamza's-suggestions + carousels + build pages link them
+tlat - arabic
+larb3 - refinements
