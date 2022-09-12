@@ -7,7 +7,8 @@ html, body {
 }
 
 .container {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 1920px) {
   .container {

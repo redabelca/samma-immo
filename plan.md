@@ -29,6 +29,8 @@ jm3a - prep
   images and fonts and icons
 sbt - nav header footer
 lhd - filter-select
-tnin - apply-hamza's-suggestions + carousels + build pages link them
-tlat - arabic
-larb3 - refinements
+tnin - carousel
+tlat - apply-hamza's-suggestions + carousels + k comps refinements
+larb3 -  build pages link them + arabic
+lkhmis - 
+jm3a - refinements

@@ -242,7 +242,66 @@
   </header>
   <!-- END HEADER -->
 
-  <div class="h-[50vh]"></div>
+  <!-- OUR PRODUCTS -->
+  <section class="container bllg:max-w-full my-16">
+    <h4 class="text-2xl font-bold text-center text-darkBlue2 mb-10">Nos produits</h4>
+    <div class="flex px-3 lg:px-0 lg:justify-center flex-nowrap gap-3 overflow-x-auto">
+      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
+        <div class="absolute bottom-0 left-0 p-4">
+          <h6 class="font-bold text-white">Appartements</h6>
+        </div>
+      </div>
+      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
+        <div class="absolute bottom-0 left-0 p-4">
+          <h6 class="font-bold text-white">Plateaux de bureaux</h6>
+        </div>
+      </div>
+      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
+        <div class="absolute bottom-0 left-0 p-4">
+          <h6 class="font-bold text-white">Locaux commerciaux</h6>
+        </div>
+      </div>
+      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
+        <div class="absolute bottom-0 left-0 p-4">
+          <h6 class="font-bold text-white">Lots de terrains</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OUR PRODUCTS -->
+
+  <!-- IN PROGRESS PROJECTS -->
+  <section class="relative" data-carousel="static">
+    <div class="absolute flex top-[230px] md:bottom-4 md:top-auto right-5 z-30">
+      <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-prev="">
+        <img src="./images/arrow-left.svg" alt="" width="50" class="opacity-60">
+      </button>
+      <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-next="">
+        <img src="./images/arrow-right.svg" alt="" width="50">
+      </button>
+    </div>
+    <div class="relative h-[300px] md:h-[500px] overflow-hidden z-10">
+      <!-- Item 1 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item=""></div>
+      <!-- Item 2 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="active"></div>
+      <!-- Item 3 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item=""></div>
+      <!-- Item 4 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
+      <!-- Item 5 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
+    </div>
+    <div class="md:absolute top-0 w-full md:w-5/12 bg-darkBlue2 md:bg-[#003D71A1] h-full z-30 flex p-10 md:px-7">
+      <div class="m-auto md:max-w-[400px] text-white">
+        <h4 class="text-3xl font-bold mb-3">Projets en cours</h4>
+        <p class="mb-14">Toujours au service de l’humain, SAMA Immobilier lance de nouveaux projets pour vous offrir plus d’espace et plus de liberté</p>
+        <a class="p-4 px-6 bg-white text-darkBlue2 font-bold rounded-lg">Voir plus</a>
+      </div>
+    </div>
+  </section>
+  <!-- END IN PROGRESS PROJECTS -->
+
 
   <!-- FOOTER -->
   <footer class="flex p-8 bg-darkBlue2 text-white bg-[url('../images/arabic-letter.png')] bg-contain bg-center bg-no-repeat min-h-[500px]">

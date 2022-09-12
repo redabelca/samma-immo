@@ -1,0 +1,171 @@
+<!-- HEADER -->
+<header class="container">
+  <div class="h-[70vh] max-h-[500px] min-h-[350px] bg-center bg-cover bg-no-repeat grid md:grid-cols-2 md:items-center md:justify-items-center p-9 md:p-0" style="background-image: linear-gradient(271deg, #0000004e 0%, #00000000 100%), url('./images/building.png');">
+    <div class="text-darkBlue3">
+      <h2 class="text-3xl md:text-4xl font-bold">SAMA Immobilier</h2>
+      <p>Votre partenaire immobilier de confiance</p>
+    </div>
+    <img src="./images/play-video.svg" alt="" width="150">
+  </div>
+
+  <!-- FILTER -->
+  <div class="flex flex-col md:items-start font-bold md:-mt-28 md:w-[90%] m-auto -mt-6">
+    <div class="hidden md:block bg-white p-5 pr-8 rounded-t-lg">
+      <h5 class="text-darkBlue2">Trouver votre appartement de rêve</h5>
+    </div>
+    <div class="hidden md:flex items-center bg-white p-3 pl-5 rounded-tr-lg rounded-b-lg w-full shadow-lg space-x-3">
+      <div class="flex-1 wrapper">
+        <div class="select-btn flex flex-col">
+          <span class="mb-2">Ville</span>
+          <div class="flex justify-between">
+            <span class="italic font-normal text-[#515151] text-sm">saisissez une ville</span>
+            <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+          </div>
+        </div>
+        <div class="content">
+          <div class="search">
+            <input spellcheck="false" type="text" placeholder="Search">
+          </div>
+          <ul class="options"></ul>
+        </div>
+      </div>
+      <div class="border h-[50px]"></div>
+      <div class="flex-1 wrapper">
+        <div class="select-btn flex flex-col">
+          <span class="mb-2">Projets</span>
+          <div class="flex justify-between">
+            <span class="italic font-normal text-[#515151] text-sm">Toutes</span>
+            <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+          </div>
+        </div>
+        <div class="content">
+          <div class="search">
+            <input spellcheck="false" type="text" placeholder="Search">
+          </div>
+          <ul class="options"></ul>
+        </div>
+      </div>
+      <div class="border h-[50px]"></div>
+      <div class="flex-1 wrapper">
+        <div class="select-btn flex flex-col">
+          <span class="mb-2">Budget</span>
+          <div class="flex justify-between">
+            <span class="italic font-normal text-[#515151] text-sm">Prix min - Prix max</span>
+            <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+          </div>
+        </div>
+        <div class="content">
+          <div class="search">
+            <input spellcheck="false" type="text" placeholder="Search">
+          </div>
+          <ul class="options"></ul>
+        </div>
+      </div>
+      <div class="border h-[50px]"></div>
+      <div class="flex-1 wrapper">
+        <div class="select-btn flex flex-col">
+          <span class="mb-2">Superficie</span>
+          <div class="flex justify-between">
+            <span class="italic font-normal text-[#515151] text-sm">Surface min. m2</span>
+            <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+          </div>
+        </div>
+        <div class="content">
+          <div class="search">
+            <input spellcheck="false" type="text" placeholder="Search">
+          </div>
+          <ul class="options"></ul>
+        </div>
+      </div>
+      <div class="bg-darkBlue2 w-[70px] aspect-square rounded-lg flex cursor-pointer">
+        <img src="./images/search.svg" alt="search" width="25" class="m-auto">
+      </div>
+    </div>
+    <button type="submit" class="flex grow m-auto md:hidden items-center justify-center text-darkBlue2  bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-lg px-5 py-2.5 text-center shadow-lg" data-modal-toggle="mobileFilters">
+      <img src="./images/search.svg" alt="search" class="mr-3 invert">
+      Recherche
+    </button>
+    <!-- Main modal -->
+    <div id="mobileFilters" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center m-auto">
+      <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow ">
+          <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="mobileFilters">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+          <div class="py-6 px-6 lg:px-8">
+            <h3 class="m-4 ml-0 text-xl font-bold text-darkBlue2">Trouver votre appartement de rêve</h3>
+            <form class="space-y-6" action="#">
+              <div>
+                <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Ville</label>
+                <div class="flex-1 wrapper">
+                  <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <span class="mb-2">saisissez une ville</span>
+                  </div>
+                  <div class="content">
+                    <div class="search">
+                      <input spellcheck="false" type="text" placeholder="Search">
+                    </div>
+                    <ul class="options"></ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Projets</label>
+                <div class="flex-1 wrapper">
+                  <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <span class="mb-2">Toutes</span>
+                  </div>
+                  <div class="content">
+                    <div class="search">
+                      <input spellcheck="false" type="text" placeholder="Search">
+                    </div>
+                    <ul class="options"></ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Budget</label>
+                <div class="flex-1 wrapper">
+                  <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <span class="mb-2">Prix min - Prix max</span>
+                  </div>
+                  <div class="content">
+                    <div class="search">
+                      <input spellcheck="false" type="text" placeholder="Search">
+                    </div>
+                    <ul class="options"></ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Superficie</label>
+                <div class="flex-1 wrapper">
+                  <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <span class="mb-2">Surface min. m2</span>
+                  </div>
+                  <div class="content">
+                    <div class="search">
+                      <input spellcheck="false" type="text" placeholder="Search">
+                    </div>
+                    <ul class="options"></ul>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="flex items-center justify-center w-full text-white bg-darkBlue2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <img src="./images/search.svg" alt="search" class="mr-3">
+                recherche
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END FILTER -->
+
+</header>
+<!-- END HEADER -->

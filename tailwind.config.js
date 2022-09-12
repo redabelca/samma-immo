@@ -9,6 +9,21 @@ module.exports = {
         darkBlue: "#06559D",
         darkBlue2: "#003D71",
         darkBlue3: "#0C294C",
+      },
+      width: {
+        iconeHomeBlock: '60px'
+      },
+      height: {
+        homeKeyBlock: '650px',
+        iconeHomeBlock: '60px'
+      },
+      backgroundImage: {
+        'home-key': "url('/src/images/homeKey.jpg')",
+        'any-question': "url('/src/images/sammBGblue.png')",
+        'blog-home': "url('/src/images/Mask_group.png')"
+      },
+      screens: {
+        bllg: { max: '1023px' },
       }
     }
   },
