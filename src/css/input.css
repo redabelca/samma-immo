@@ -117,3 +117,8 @@ li.selected {
   background: #f2f2f2;
 }
 /* END SELECT */
+
+.slide-item.z-10.-translate-x-full,
+.slide-item.z-10.translate-x-full {
+  opacity: 0;
+}

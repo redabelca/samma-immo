@@ -30,7 +30,7 @@ jm3a - prep
 sbt - nav header footer
 lhd - filter-select
 tnin - carousel
-tlat - apply-hamza-abdssamad's-suggestions + carousels + k comps refinements
-larb3 - build pages link them + arabic
-lkhmis - 
-jm3a - refinements
+tlat - carousels
+larb3 - carousels + build pages link them
+lkhmis - build pages link them + arabic
+jm3a - refinements + apply-hamza-abdssamad's-suggestions
