@@ -1876,15 +1876,15 @@ input:checked + .toggle-bg {
 }
 
 .bg-home-key {
-  background-image: url('/src/images/homeKey.jpg');
+  background-image: url('../images/homeKey.jpg');
 }
 
 .bg-any-question {
-  background-image: url('/src/images/sammBGblue.png');
+  background-image: url('../images/sammBGblue.png');
 }
 
 .bg-blog-home {
-  background-image: url('/src/images/Mask_group.png');
+  background-image: url('../images/Mask_group.png');
 }
 
 .bg-contain {

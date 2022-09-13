@@ -11,21 +11,21 @@ module.exports = {
         darkBlue3: "#0C294C",
       },
       width: {
-        iconeHomeBlock: '60px'
+        iconeHomeBlock: "60px",
       },
       height: {
-        homeKeyBlock: '650px',
-        iconeHomeBlock: '60px'
+        homeKeyBlock: "650px",
+        iconeHomeBlock: "60px",
       },
       backgroundImage: {
-        'home-key': "url('/src/images/homeKey.jpg')",
-        'any-question': "url('/src/images/sammBGblue.png')",
-        'blog-home': "url('/src/images/Mask_group.png')"
+        "home-key": "url('../images/homeKey.jpg')",
+        "any-question": "url('../images/sammBGblue.png')",
+        "blog-home": "url('../images/Mask_group.png')",
       },
       screens: {
-        bllg: { max: '1023px' },
-      }
-    }
+        bllg: { max: "1023px" },
+      },
+    },
   },
   plugins: [require("flowbite/plugin")],
 };
