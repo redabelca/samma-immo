@@ -4,7 +4,7 @@ for (const wrapper of wrappers) {
   const selectBtn = wrapper.querySelector(".select-btn"),
     searchInp = wrapper.querySelector("input"),
     options = wrapper.querySelector(".options");
-  
+
   let countries = [
     "Afghanistan",
     "Algeria",
@@ -53,7 +53,7 @@ for (const wrapper of wrappers) {
     "United Kingdom",
     "Vietnam",
   ];
-  
+
   function addCountry(selectedCountry) {
     options.innerHTML = "";
     countries.forEach((country) => {
@@ -63,14 +63,14 @@ for (const wrapper of wrappers) {
     });
   }
   addCountry();
-  
+
   function updateName(selectedLi) {
     searchInp.value = "";
     addCountry(selectedLi.innerText);
     wrapper.classList.remove("active");
     selectBtn.firstElementChild.innerText = selectedLi.innerText;
   }
-  
+
   searchInp.addEventListener("keyup", () => {
     let arr = [];
     let searchWord = searchInp.value.toLowerCase();
@@ -88,11 +88,16 @@ for (const wrapper of wrappers) {
       ? arr
       : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
   });
-  
+
   selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 }
 
-document.documentElement.setAttribute(
-  "dir",
-  document.documentElement.dir ? "ltr" : "rtl"
-);
+const switchDir = () =>
+  document.documentElement.setAttribute(
+    "dir",
+    document.documentElement.dir == "ltr" ? "rtl" : "ltr"
+  );
+
+switchDir();
+
+document.body.ondblclick = switchDir;

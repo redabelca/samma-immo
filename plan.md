@@ -58,15 +58,13 @@ space-x-$1 rtl:space-x-reverse
 
 
 
-open http://127.0.0.1:5500/src/blog-single.html
-open http://127.0.0.1:5500/src/contact-us.html
-open http://127.0.0.1:5500/src/our-products.html
-open http://127.0.0.1:5500/src/our-services.html
-open http://127.0.0.1:5500/src/who-are-we.html
-open http://127.0.0.1:5500/src/our-products-with-listing.html
-open http://127.0.0.1:5500/src/our-products-with-map.html
-open http://127.0.0.1:5500/src/our-products-with-filter.html
-open http://127.0.0.1:5500/src/blog.html
-open http://127.0.0.1:5500/src/index.html
-
-
+open https://flourishing-hotteok-826cb0.netlify.app/src/blog-single.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/contact-us.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/our-products.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/our-services.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/who-are-we.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/our-products-with-listing.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/our-products-with-map.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/our-products-with-filter.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/blog.html
+open https://flourishing-hotteok-826cb0.netlify.app/src/index.html
