@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
@@ -20,15 +20,15 @@
       <a class="flex items-center">
         <img src="./images/logosama.svg" class="w-24 md:w-32" alt="Samma Logo">
       </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ltr:ml-3 rtl:mr-3 text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
         <span class="inline-flex md:hidden font-semibold">Menu</span>
         <svg id="humburger" class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
         </svg>
         <img id="x-icon" class="p-1" src="./images/x.svg" alt="x" width="24">
       </button>
-      <div class="hidden absolute w-[calc(100%_+_1.55rem)] -ml-4 top-[calc(40px_-_.5rem)] md:block md:static md:w-auto" id="navbar-default">
-        <ul class="flex flex-col items-center p-4 mt-4 rounded-lg bg-darkBlue2 md:bg-inherit text-white md:text-inherit md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-semibold">
+      <div class="hidden absolute w-[calc(100%_+_1.55rem)] -ltr:ml-4 rtl:mr-4 top-[calc(40px_-_.5rem)] md:block md:static md:w-auto" id="navbar-default">
+        <ul class="flex flex-col items-center p-4 mt-4 rounded-lg bg-darkBlue2 md:bg-inherit text-white md:text-inherit md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:text-sm md:font-semibold">
           <li>
             <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Accueil</a>
           </li>
@@ -49,9 +49,9 @@
           </li>
           <li>
             <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="focus:outline-none font-semibold rounded-lg text-sm text-center inline-flex items-center   " type="button">
-              <img src="./images/france-flag.svg" class="mr-1" alt="" width="20">
+              <img src="./images/france-flag.svg" class="ltr:mr-1 rtl:ml-1" alt="" width="20">
               Fr
-              <svg class="ml-1 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="ltr:ml-1 rtl:mr-1 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
@@ -81,15 +81,15 @@
       <video
         src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov"
         playsinline autoplay muted loop
-        class="absolute hidden z-0 top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 object-cover"></video>
+        class="absolute hidden z-0 top-1/2 ltr:left-1/2 rtl:right-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 object-cover"></video>
     </div>
 
     <!-- FILTER -->
     <div class="flex z-10 relative flex-col md:items-start font-bold md:-mt-28 md:w-[90%] m-auto -mt-6">
-      <div class="hidden md:block bg-white p-5 pr-8 rounded-t-lg">
+      <div class="hidden md:block bg-white p-5 ltr:pr-8 rtl:pl-8 rounded-t-lg">
         <h5 class="text-darkBlue2">Trouver votre appartement de rêve</h5>
       </div>
-      <div class="hidden md:flex items-center bg-white p-3 pl-5 rounded-tr-lg rounded-b-lg w-full shadow-lg space-x-3">
+      <div class="hidden md:flex items-center bg-white p-3 ltr:pl-5 rtl:pr-5 ltr:rounded-tr rtl:rounded-tl-lg rounded-b-lg w-full shadow-lg space-x-3 rtl:space-x-reverse">
         <div class="flex-1 wrapper">
           <div class="select-btn flex flex-col">
             <span class="mb-2">Ville</span>
@@ -158,7 +158,7 @@
         </div>
       </div>
       <button type="submit" class="flex grow m-auto md:hidden items-center justify-center text-darkBlue2  bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-lg px-5 py-2.5 text-center shadow-lg" data-modal-toggle="mobileFilters">
-        <img src="./images/search.svg" alt="search" class="mr-3 invert">
+        <img src="./images/search.svg" alt="search" class="ltr:mr-3 rtl:ml-3 invert">
         Recherche
       </button>
       <!-- Main modal -->
@@ -166,14 +166,14 @@
         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
           <!-- Modal content -->
           <div class="relative bg-white rounded-lg shadow ">
-            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="mobileFilters">
+            <button type="button" class="absolute top-3 ltr:right-2.5 rtl:left-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="mobileFilters">
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
               </svg>
               <span class="sr-only">Close modal</span>
             </button>
             <div class="py-6 px-6 lg:px-8">
-              <h3 class="m-4 ml-0 text-xl font-bold text-darkBlue2">Trouver votre appartement de rêve</h3>
+              <h3 class="m-4 ltr:ml-0 rtl:mr-0 text-xl font-bold text-darkBlue2">Trouver votre appartement de rêve</h3>
               <form class="space-y-6" action="#">
                 <div>
                   <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Ville</label>
@@ -232,7 +232,7 @@
                   </div>
                 </div>
                 <button type="submit" class="flex items-center justify-center w-full text-white bg-darkBlue2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                  <img src="./images/search.svg" alt="search" class="mr-3">
+                  <img src="./images/search.svg" alt="search" class="ltr:mr-3 rtl:ml-3">
                   recherche
                 </button>
               </form>
@@ -250,22 +250,22 @@
     <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">Nos produits</h4>
     <div class="flex px-3 lg:px-0 lg:justify-center flex-nowrap gap-3 overflow-x-auto">
       <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
-        <div class="absolute bottom-0 left-0 p-4">
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
           <h6 class="font-bold text-white">Appartements</h6>
         </div>
       </div>
       <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
-        <div class="absolute bottom-0 left-0 p-4">
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
           <h6 class="font-bold text-white">Plateaux de bureaux</h6>
         </div>
       </div>
       <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
-        <div class="absolute bottom-0 left-0 p-4">
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
           <h6 class="font-bold text-white">Locaux commerciaux</h6>
         </div>
       </div>
       <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
-        <div class="absolute bottom-0 left-0 p-4">
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
           <h6 class="font-bold text-white">Lots de terrains</h6>
         </div>
       </div>
@@ -275,7 +275,7 @@
 
   <!-- IN PROGRESS PROJECTS -->
   <section class="relative" data-carousel="static">
-    <div class="absolute flex top-[230px] md:bottom-4 md:top-auto right-5 z-30">
+    <div dir="ltr" class="absolute flex top-[230px] md:bottom-4 md:top-auto ltr:right-5 rtl:left-5 z-30">
       <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-prev="">
         <img src="./images/arrow-left.svg" alt="" width="50" class="opacity-60">
       </button>
@@ -320,12 +320,12 @@
                 src="./images/casque.svg"
                 alt="" />
             </div>
-            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ml-3 sm:ml-4">
+            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ltr:ml-3 rtl:mr-3 ltr:sm:ml-4 rtl:sm:mr-4">
               <h1
-                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ml-2">
+                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ltr:ml-2 rtl:mr-2">
                 Conseil
               </h1>
-              <p class="ml-2 lg:text-xl sm:text-[16px]">
+              <p class="ltr:ml-2 rtl:mr-2 lg:text-xl sm:text-[16px]">
                 Vous avez besoin d’une information complémentaire ? Nos experts
                 sont à votre écoute.
               </p>
@@ -338,12 +338,12 @@
                 src="./images/Group.svg"
                 alt="" />
             </div>
-            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ml-3 sm:ml-4">
+            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ltr:ml-3 rtl:mr-3 ltr:sm:ml-4 rtl:sm:mr-4">
               <h1
-                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ml-2">
+                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ltr:ml-2 rtl:mr-2">
                 Accompagnement
               </h1>
-              <p class="ml-2 lg:text-xl sm:text-[16px]">
+              <p class="ltr:ml-2 rtl:mr-2 lg:text-xl sm:text-[16px]">
                 Vous êtes au cœur de notre intérêt, nous vous accompagnons et
                 vous aidons à vivre une très belle expérience d’achat de votre
                 bien immobilier.
@@ -357,12 +357,12 @@
                 src="./images/params.svg"
                 alt="" />
             </div>
-            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ml-3 sm:ml-4">
+            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ltr:ml-3 rtl:mr-3 ltr:sm:ml-4 rtl:sm:mr-4">
               <h1
-                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ml-2">
+                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ltr:ml-2 rtl:mr-2">
                 Service après-vente
               </h1>
-              <p class="ml-2 lg:text-xl sm:text-[16px]">
+              <p class="ltr:ml-2 rtl:mr-2 lg:text-xl sm:text-[16px]">
                 SAMA Immobilier met à votre disposition ses équipes techniques
                 pour répondre à vos besoins et traiter vos requêtes dans
                 différents corps de métier.
@@ -665,7 +665,7 @@
         </div>
       </div>
     </div>
-    <div class="container hidden md:flex justify-end mt-12">
+    <div dir="ltr" class="container hidden md:flex justify-end mt-12">
       <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-prev="">
         <img src="./images/arrow-left.svg" alt="" width="50" class="opacity-60">
       </button>
@@ -773,11 +773,11 @@
   <!-- LAST ARTICLES -->
   <section class="grid md:grid-cols-12 py-24">
     <div class="md:col-span-4 flex">
-      <div class="m-auto text-center md:text-left md:w-1/2">
+      <div class="m-auto text-center ltr:md:text-left rtl:md:text-right md:w-1/2">
         <span class="hidden md:block font-medium text-2xl mb-6 text-darkBlue2">Blog</span>
         <h4 class="font-bold text-4xl mb-7 text-darkBlue2">Nos derniers articles</h4>
         <p class="text-xl">Toute l’actualité sur le secteur immobilier</p>
-        <div class="container hidden md:flex md:gap-x-8 mt-12">
+        <div dir="ltr" class="container hidden md:flex md:gap-x-8 mt-12">
           <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" onclick="articlesCarousel?.scrollBy(-390,0)">
             <img src="./images/arrow-left.svg" alt="" width="80" class="opacity-60">
           </button>
@@ -787,7 +787,7 @@
         </div>
       </div>
     </div>
-    <div id="articlesCarousel" class="flex flex-nowrap gap-3 overflow-x-auto md:col-span-8 mt-24 md:mt-0 pl-3 md:pl-0 scroll-smooth">
+    <div id="articlesCarousel" class="flex flex-nowrap gap-3 overflow-x-auto md:col-span-8 mt-24 md:mt-0 ltr:pl-3 rtl:pr-3 ltr:md:pl-0 rtl:md:pr-0 scroll-smooth">
       <div
         class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
         <a href="#">
@@ -805,7 +805,7 @@
             Mars 05, 2022
           </p>
           <div>
-            <ul class="list-decimal mb-4 pl-4">
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
               <li>
                 Se poser les bonnes questions (localisation, budget, nombre de
                 pièces, terrasse …).
@@ -815,10 +815,10 @@
           </div>
           <div class="w-full flex justify-between items-center">
             <p class="font-bold text-darkBlue2">Lire plus</p>
-            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
           </div>
         </div>
-        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
       </div>
       <div
         class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
@@ -837,7 +837,7 @@
             Mars 05, 2022
           </p>
           <div>
-            <ul class="list-decimal mb-4 pl-4">
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
               <li>
                 Se poser les bonnes questions (localisation, budget, nombre de
                 pièces, terrasse …).
@@ -847,10 +847,10 @@
           </div>
           <div class="w-full flex justify-between items-center">
             <p class="font-bold text-darkBlue2">Lire plus</p>
-            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
           </div>
         </div>
-        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
       </div>
       <div
         class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
@@ -869,7 +869,7 @@
             Mars 05, 2022
           </p>
           <div>
-            <ul class="list-decimal mb-4 pl-4">
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
               <li>
                 Se poser les bonnes questions (localisation, budget, nombre de
                 pièces, terrasse …).
@@ -879,10 +879,10 @@
           </div>
           <div class="w-full flex justify-between items-center">
             <p class="font-bold text-darkBlue2">Lire plus</p>
-            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
           </div>
         </div>
-        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
       </div>
       <div
         class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
@@ -901,7 +901,7 @@
             Mars 05, 2022
           </p>
           <div>
-            <ul class="list-decimal mb-4 pl-4">
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
               <li>
                 Se poser les bonnes questions (localisation, budget, nombre de
                 pièces, terrasse …).
@@ -911,10 +911,10 @@
           </div>
           <div class="w-full flex justify-between items-center">
             <p class="font-bold text-darkBlue2">Lire plus</p>
-            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
           </div>
         </div>
-        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
       </div>
       <div
         class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
@@ -933,7 +933,7 @@
             Mars 05, 2022
           </p>
           <div>
-            <ul class="list-decimal mb-4 pl-4">
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
               <li>
                 Se poser les bonnes questions (localisation, budget, nombre de
                 pièces, terrasse …).
@@ -943,10 +943,10 @@
           </div>
           <div class="w-full flex justify-between items-center">
             <p class="font-bold text-darkBlue2">Lire plus</p>
-            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
           </div>
         </div>
-        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
       </div>
     </div>
   </section>
@@ -957,7 +957,7 @@
     <div
       class="md:w-[46%] bg-[url('../images/sammBGblue.png')] w-full lg:h-auto h-[300px] bg-cover bg-center"></div>
     <div class="md:w-[54%] bg-lightBlue md:h-auto">
-      <div class="py-10 pl-7 lg:pt-20 lg:pl-16">
+      <div class="py-10 ltr:pl-7 rtl:pr-7 lg:pt-20 ltr:lg:pl-16 rtl:lg:pr-16">
         <h1
           class="lg:text-[48px] text-2xl w-[90%] font-bold text-darkBlue2 tracking-tight lg:mb-14 mb-6">
           Vous avez des questions ?
@@ -968,7 +968,7 @@
         </p>
         <button
           type="button"
-          class="text-white bg-darkBlue lg:font-bold lg:text-[20px] lg:h-[64px] w-[240px] h-[52px] bg-darkBlue4 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
+          class="text-white bg-darkBlue lg:font-bold lg:text-[20px] lg:h-[64px] w-[240px] h-[52px] bg-darkBlue4 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 ltr:mr-2 rtl:ml-2 mb-2 focus:outline-none">
           Contactez-nous
         </button>
       </div>
@@ -981,7 +981,7 @@
     <div class="grid sm:grid-cols-2 md:grid-cols-9 gap-2 m-auto">
       <div class="md:col-span-2 sm:mt-9 md:mt-0">
         <a>
-          <img src="./images/white-logo.png" width="200" alt="Samma Logo" class="-ml-3">
+          <img src="./images/white-logo.png" width="200" alt="Samma Logo" class="-ltr:ml-3 rtl:mr-3">
         </a>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
       </div>
@@ -1041,7 +1041,7 @@
             <a class="hover:underline">contact@example.com</a>
           </li>
           <li class="mt-10">
-            <div class="flex space-x-2">
+            <div class="flex space-x-2 rtl:space-x-reverse">
               <a><img src="./images/facebook.png" alt="Facebook" width="40"></a>
               <a><img src="./images/instagram.png" alt="Instagram" width="40"></a>
               <a><img src="./images/twitter.png" alt="Twitter" width="40"></a>
@@ -1053,7 +1053,7 @@
   </footer>
   <!-- END FOOTER -->
 
-  
+
 
   <script src="./js/flowbite.js"></script>
   <script src="./js/main.js"></script>

@@ -34,3 +34,39 @@ tlat - carousels
 larb3 - carousels + build pages link them
 lkhmis - build pages link them + arabic
 jm3a - refinements + apply-hamza-abdssamad's-suggestions
+
+
+
+mr
+ml
+pr
+pl
+right
+left
+rounded-r
+rounded-l
+
+([a-z:]+)?(m|p)r-([0-9]+)
+ltr:$1$2r-$3 rtl:$1$2l-$3
+$1$2r-$3 rtl:$1$2l-$3 rtl:$1$2r-0
+
+([a-z:]+)?right-([0-9]+)
+ltr:$1right-$2 rtl:$1left-$2
+
+space-x-([0-9]+)
+space-x-$1 rtl:space-x-reverse
+
+
+
+open http://127.0.0.1:5500/src/blog-single.html
+open http://127.0.0.1:5500/src/contact-us.html
+open http://127.0.0.1:5500/src/our-products.html
+open http://127.0.0.1:5500/src/our-services.html
+open http://127.0.0.1:5500/src/who-are-we.html
+open http://127.0.0.1:5500/src/our-products-with-listing.html
+open http://127.0.0.1:5500/src/our-products-with-map.html
+open http://127.0.0.1:5500/src/our-products-with-filter.html
+open http://127.0.0.1:5500/src/blog.html
+open http://127.0.0.1:5500/src/index.html
+
+

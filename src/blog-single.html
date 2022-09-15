@@ -20,15 +20,15 @@
       <a class="flex items-center">
         <img src="./images/logosama.svg" class="w-24 md:w-32" alt="Samma Logo">
       </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ltr:ml-3 rtl:mr-3 text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
         <span class="inline-flex md:hidden font-semibold">Menu</span>
         <svg id="humburger" class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
         </svg>
         <img id="x-icon" class="p-1" src="./images/x.svg" alt="x" width="24">
       </button>
-      <div class="hidden absolute w-[calc(100%_+_1.55rem)] -ml-4 top-[calc(40px_-_.5rem)] md:block md:static md:w-auto" id="navbar-default">
-        <ul class="flex flex-col items-center p-4 mt-4 rounded-lg bg-darkBlue2 md:bg-inherit text-white md:text-inherit md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-semibold">
+      <div class="hidden absolute w-[calc(100%_+_1.55rem)] -ltr:ml-4 rtl:mr-4 top-[calc(40px_-_.5rem)] md:block md:static md:w-auto" id="navbar-default">
+        <ul class="flex flex-col items-center p-4 mt-4 rounded-lg bg-darkBlue2 md:bg-inherit text-white md:text-inherit md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:text-sm md:font-semibold">
           <li>
             <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Accueil</a>
           </li>
@@ -49,9 +49,9 @@
           </li>
           <li>
             <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="focus:outline-none font-semibold rounded-lg text-sm text-center inline-flex items-center   " type="button">
-              <img src="./images/france-flag.svg" class="mr-1" alt="" width="20">
+              <img src="./images/france-flag.svg" class="ltr:mr-1 rtl:ml-1" alt="" width="20">
               Fr
-              <svg class="ml-1 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="ltr:ml-1 rtl:mr-1 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
@@ -159,7 +159,7 @@
     <div
       class="md:w-[46%] bg-[url('../images/sammBGblue.png')] w-full lg:h-auto h-[300px] bg-cover bg-center"></div>
     <div class="md:w-[54%] bg-lightBlue md:h-auto">
-      <div class="py-10 pl-7 lg:pt-20 lg:pl-16">
+      <div class="py-10 ltr:pl-7 rtl:pr-7 lg:pt-20 ltr:lg:pl-16 rtl:lg:pr-16">
         <h1
           class="lg:text-[48px] text-2xl w-[90%] font-bold text-darkBlue2 tracking-tight lg:mb-14 mb-6">
           Vous avez des questions ?
@@ -170,7 +170,7 @@
         </p>
         <button
           type="button"
-          class="text-white bg-darkBlue lg:font-bold lg:text-[20px] lg:h-[64px] w-[240px] h-[52px] bg-darkBlue4 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
+          class="text-white bg-darkBlue lg:font-bold lg:text-[20px] lg:h-[64px] w-[240px] h-[52px] bg-darkBlue4 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 ltr:mr-2 rtl:ml-2 mb-2 focus:outline-none">
           Contactez-nous
         </button>
       </div>
@@ -183,7 +183,7 @@
     <div class="grid sm:grid-cols-2 md:grid-cols-9 gap-2 m-auto">
       <div class="md:col-span-2 sm:mt-9 md:mt-0">
         <a>
-          <img src="./images/white-logo.png" width="200" alt="Samma Logo" class="-ml-3">
+          <img src="./images/white-logo.png" width="200" alt="Samma Logo" class="-ltr:ml-3 rtl:mr-3">
         </a>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
       </div>
@@ -243,7 +243,7 @@
             <a class="hover:underline">contact@example.com</a>
           </li>
           <li class="mt-10">
-            <div class="flex space-x-2">
+            <div class="flex space-x-2 rtl:space-x-reverse">
               <a><img src="./images/facebook.png" alt="Facebook" width="40"></a>
               <a><img src="./images/instagram.png" alt="Instagram" width="40"></a>
               <a><img src="./images/twitter.png" alt="Twitter" width="40"></a>

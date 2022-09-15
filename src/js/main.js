@@ -1,4 +1,3 @@
-
 const wrappers = document.querySelectorAll(".wrapper");
 
 for (const wrapper of wrappers) {
@@ -92,3 +91,8 @@ for (const wrapper of wrappers) {
   
   selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 }
+
+document.documentElement.setAttribute(
+  "dir",
+  document.documentElement.dir ? "ltr" : "rtl"
+);
