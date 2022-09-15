@@ -72,16 +72,20 @@
 
   <!-- HEADER -->
   <header class="container">
-    <div class="h-[calc(100vh_-_130px)] max-h-[900px] min-h-[350px] bg-center bg-cover bg-no-repeat grid md:grid-cols-2 md:items-center md:justify-items-center p-9 md:p-0" style="background-image: linear-gradient(271deg, #0000004e 0%, #00000000 100%), url('./images/building.png');">
-      <div class="text-darkBlue3">
+    <div class="h-[calc(100vh_-_130px)] relative max-h-[900px] min-h-[350px] bg-center bg-cover bg-no-repeat overflow-hidden grid md:grid-cols-2 md:items-center md:justify-items-center p-9 md:p-0" style="background-image: linear-gradient(271deg, #0000004e 0%, #00000000 100%), url('./images/building.png');">
+      <div class="text-darkBlue3 z-10">
         <h2 class="text-3xl md:text-4xl font-bold">SAMA Immobilier</h2>
         <p>Votre partenaire immobilier de confiance</p>
       </div>
-      <img src="./images/play-video.svg" alt="" width="150">
+      <img src="./images/play-video.svg" alt="" width="150" class="z-10">
+      <video
+        src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov"
+        playsinline autoplay muted loop
+        class="absolute hidden z-0 top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 object-cover"></video>
     </div>
 
     <!-- FILTER -->
-    <div class="flex flex-col md:items-start font-bold md:-mt-28 md:w-[90%] m-auto -mt-6">
+    <div class="flex z-10 relative flex-col md:items-start font-bold md:-mt-28 md:w-[90%] m-auto -mt-6">
       <div class="hidden md:block bg-white p-5 pr-8 rounded-t-lg">
         <h5 class="text-darkBlue2">Trouver votre appartement de rêve</h5>
       </div>
@@ -238,7 +242,6 @@
       </div>
     </div>
     <!-- END FILTER -->
-
   </header>
   <!-- END HEADER -->
 
@@ -293,7 +296,7 @@
       <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
     </div>
     <div class="md:absolute top-0 w-full md:w-5/12 bg-darkBlue2 md:bg-[#003D71A1] h-full z-30 flex p-10 md:px-7">
-      <div class="m-auto md:max-w-[400px] text-white">
+      <div class="m-auto md:max-grow-0 shrink-0 basis-[400px] text-white">
         <h4 class="text-3xl font-bold mb-3">Projets en cours</h4>
         <p class="mb-14">Toujours au service de l’humain, SAMA Immobilier lance de nouveaux projets pour vous offrir plus d’espace et plus de liberté</p>
         <a class="p-4 px-6 bg-white text-darkBlue2 font-bold rounded-lg">Voir plus</a>
@@ -307,7 +310,7 @@
     <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">Nos services</h4>
     <div class="container bllg:max-w-full lg:flex justify-center items-start md:block lg:gap-16 lg:px-0 px-4">
       <div
-        class="bg-home-key lg:w-6/12 rounded-lg sm:w-[100%] bg-no-repeat bg-center bg-cover aspect-[16/7] lg:aspect-square sm:min-w-[500px] lg:max-w-[700px] mb-8 lg:mb-0"></div>
+        class="bg-[url('../images/homeKey.jpg')] lg:w-6/12 rounded-lg sm:w-[100%] bg-no-repeat bg-center bg-cover aspect-[16/7] lg:aspect-square sm:min-w-[500px] lg:max-w-[700px] mb-8 lg:mb-0"></div>
       <div class="lg:w-6/12 md:w-full h-full">
         <div class="content-between">
           <div class="flex flex-row lg:mb-16 mb-9 sm:mb-10">
@@ -767,10 +770,192 @@
   </section>
   <!-- END REALISATIONS -->
 
+  <!-- LAST ARTICLES -->
+  <section class="grid md:grid-cols-12 py-24">
+    <div class="md:col-span-4 flex">
+      <div class="m-auto text-center md:text-left md:w-1/2">
+        <span class="hidden md:block font-medium text-2xl mb-6 text-darkBlue2">Blog</span>
+        <h4 class="font-bold text-4xl mb-7 text-darkBlue2">Nos derniers articles</h4>
+        <p class="text-xl">Toute l’actualité sur le secteur immobilier</p>
+        <div class="container hidden md:flex md:gap-x-8 mt-12">
+          <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" onclick="articlesCarousel?.scrollBy(-390,0)">
+            <img src="./images/arrow-left.svg" alt="" width="80" class="opacity-60">
+          </button>
+          <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" onclick="articlesCarousel?.scrollBy(390,0)">
+            <img src="./images/arrow-right.svg" alt="" width="80">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="articlesCarousel" class="flex flex-nowrap gap-3 overflow-x-auto md:col-span-8 mt-24 md:mt-0 pl-3 md:pl-0 scroll-smooth">
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            Comment faire le bon choix d’appartement ?
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            Mars 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 pl-4">
+              <li>
+                Se poser les bonnes questions (localisation, budget, nombre de
+                pièces, terrasse …).
+              </li>
+              <li>Préciser ses préférences et ses priorités</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            Comment faire le bon choix d’appartement ?
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            Mars 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 pl-4">
+              <li>
+                Se poser les bonnes questions (localisation, budget, nombre de
+                pièces, terrasse …).
+              </li>
+              <li>Préciser ses préférences et ses priorités</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            Comment faire le bon choix d’appartement ?
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            Mars 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 pl-4">
+              <li>
+                Se poser les bonnes questions (localisation, budget, nombre de
+                pièces, terrasse …).
+              </li>
+              <li>Préciser ses préférences et ses priorités</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            Comment faire le bon choix d’appartement ?
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            Mars 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 pl-4">
+              <li>
+                Se poser les bonnes questions (localisation, budget, nombre de
+                pièces, terrasse …).
+              </li>
+              <li>Préciser ses préférences et ses priorités</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            Comment faire le bon choix d’appartement ?
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            Mars 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 pl-4">
+              <li>
+                Se poser les bonnes questions (localisation, budget, nombre de
+                pièces, terrasse …).
+              </li>
+              <li>Préciser ses préférences et ses priorités</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px]" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+    </div>
+  </section>
+  <!-- END LAST ARTICLES -->
+
   <!-- QUESTIONS -->
   <section class="w-full md:flex">
     <div
-      class="md:w-[46%] bg-any-question w-full lg:h-auto h-[300px] bg-cover bg-center"></div>
+      class="md:w-[46%] bg-[url('../images/sammBGblue.png')] w-full lg:h-auto h-[300px] bg-cover bg-center"></div>
     <div class="md:w-[54%] bg-lightBlue md:h-auto">
       <div class="py-10 pl-7 lg:pt-20 lg:pl-16">
         <h1
@@ -867,6 +1052,8 @@
     </div>
   </footer>
   <!-- END FOOTER -->
+
+  
 
   <script src="./js/flowbite.js"></script>
   <script src="./js/main.js"></script>
