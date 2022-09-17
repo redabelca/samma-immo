@@ -1167,12 +1167,12 @@ input:checked + .toggle-bg {
   bottom: 60px;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .z-\[50\] {
   z-index: 50;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .z-20 {
@@ -2342,9 +2342,9 @@ input:checked + .toggle-bg {
   padding-right: 0.5rem;
 }
 
-.py-2\.5 {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-2 {
@@ -2372,14 +2372,14 @@ input:checked + .toggle-bg {
   padding-right: 1.25rem;
 }
 
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .py-6 {
@@ -2471,6 +2471,11 @@ input:checked + .toggle-bg {
   line-height: 1.25rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -2505,11 +2510,6 @@ input:checked + .toggle-bg {
 
 .text-\[14px\] {
   font-size: 14px;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-5xl {
@@ -2746,6 +2746,10 @@ input:checked + .toggle-bg {
 
 html, body {
   font-family: 'Montserrat', sans-serif;
+}
+
+[dir="rtl"] html, body {
+  font-family: 'Tajawal', sans-serif;
 }
 
 .container {
@@ -3026,6 +3030,10 @@ li.selected {
   margin-left: 0.75rem;
 }
 
+[dir="ltr"] .ltr\:-ml-4 {
+  margin-left: -1rem;
+}
+
 [dir="ltr"] .ltr\:mr-1 {
   margin-right: 0.25rem;
 }
@@ -3036,10 +3044,6 @@ li.selected {
 
 [dir="ltr"] .ltr\:mr-2 {
   margin-right: 0.5rem;
-}
-
-[dir="ltr"] .ltr\:-ml-4 {
-  margin-left: -1rem;
 }
 
 [dir="ltr"] .ltr\:mr-3 {
@@ -3522,8 +3526,8 @@ li.selected {
     min-height: 400px;
   }
 
-  .md\:w-32 {
-    width: 8rem;
+  .md\:w-36 {
+    width: 9rem;
   }
 
   .md\:w-auto {
@@ -3536,10 +3540,6 @@ li.selected {
 
   .md\:w-\[54\%\] {
     width: 54%;
-  }
-
-  .md\:w-36 {
-    width: 9rem;
   }
 
   .md\:w-\[90\%\] {
@@ -3631,12 +3631,6 @@ li.selected {
          column-gap: 2rem;
   }
 
-  .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .md\:space-x-7 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.75rem * var(--tw-space-x-reverse));
@@ -3715,11 +3709,6 @@ li.selected {
 
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
-  }
-
-  .md\:hover\:text-blue-700:hover {
-    --tw-text-opacity: 1;
-    color: rgb(26 86 219 / var(--tw-text-opacity));
   }
 
   [dir="ltr"] .ltr\:md\:pl-0 {

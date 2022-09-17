@@ -5,6 +5,9 @@
 html, body {
   font-family: 'Montserrat', sans-serif;
 }
+[dir="rtl"] html, body {
+  font-family: 'Tajawal', sans-serif;
+}
 
 .container {
   margin-left: auto;

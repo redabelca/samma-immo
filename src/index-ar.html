@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samma Immo</title>
+  <link rel="stylesheet" href="./css/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="bg-white border-gray-200 px-2 md:px-4 py-5 rounded text-darkBlue2">
+    <div class="container relative flex flex-wrap justify-between items-center">
+      <a class="flex items-center">
+        <img src="./images/logosama.svg" class="w-24 md:w-36" alt="Samma Logo">
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ltr:ml-3 rtl:mr-3 text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+        <svg id="humburger" class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+        <img id="x-icon" class="p-1" src="./images/x.svg" alt="x" width="24">
+      </button>
+      <div class="hidden absolute w-[calc(100%_+_1.55rem)] ltr:-ml-4 rtl:mr-4 top-[calc(40px_-_.5rem)] md:block md:static md:w-auto z-[50]" id="navbar-default">
+        <ul class="flex flex-col items-center p-4 mt-4 rounded-lg bg-darkBlue2 md:bg-inherit text-white md:text-inherit md:flex-row md:space-x-7 xl:space-x-9 rtl:space-x-reverse md:mt-0 md:text-sm md:font-semibold">
+          <li>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">الرئيسية</a>
+          </li>
+          <li>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">منتجاتنا</a>
+          </li>
+          <li>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">خدماتنا</a>
+          </li>
+          <li>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">من نحن</a>
+          </li>
+          <li>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">المدونة</a>
+          </li>
+          <li>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">اتصل بنا</a>
+          </li>
+          <li>
+            <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="focus:outline-none font-semibold rounded-lg text-sm text-center inline-flex items-center   " type="button">
+              <img src="./images/france-flag.svg" class="ltr:mr-1 rtl:ml-1" alt="" width="20">
+              Fr
+              <svg class="ltr:ml-1 rtl:mr-1 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow " data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 285px, 0px);">
+              <ul class="py-1 text-sm" aria-labelledby="dropdownDefault">
+                <li>
+                  <a class="block py-2 px-4 hover:bg-gray-100">AR</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAV -->
+
+  <!-- HEADER -->
+  <header class="container">
+    <div class="md:h-[calc(100vh_-_170px)] relative max-h-[600px] md:min-h-[450px] bg-center bg-cover bg-no-repeat overflow-hidden grid md:grid-cols-2 md:items-center md:justify-items-center p-9 md:p-0" style="background-image: linear-gradient(90deg, #000000d0 0%, #00000000 100%), url('./images/bg\ sama.png');">
+      <div class="text-white z-10" id="headerTextContent">
+        <h2 class="text-5xl md:text-4xl font-bold">سما للعقار</h2>
+        <p>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</p>
+      </div>
+      <img
+        id="headerPlayButton" src="./images/play-video.svg" alt="" width="150" class="z-10 cursor-pointer">
+      <video
+        id="headerVideo"
+        src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov"
+        class="absolute hidden z-20 top-1/2 ltr:left-1/2 rtl:right-1/2 w-full h-full ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 object-cover"></video>
+      <!-- playsinline autoplay muted loop -->
+    </div>
+
+    <!-- FILTER -->
+    <div class="flex relative z-50 flex-col md:items-start font-bold md:-mt-28 md:w-[90%] m-auto -mt-6">
+      <div class="hidden md:block bg-white p-5 ltr:pr-8 rtl:pl-8 rounded-t-lg">
+        <h5 class="text-darkBlue2">ابحث عن شقة أحلامك</h5>
+      </div>
+      <div class="hidden md:flex items-center bg-white p-3 ltr:pl-5 rtl:pr-5 ltr:rounded-tr rtl:rounded-tl-lg rounded-b-lg w-full shadow-2xl space-x-3 rtl:space-x-reverse">
+        <div class="flex-1 wrapper">
+          <div class="select-btn flex flex-col">
+            <span class="mb-2">منطقة</span>
+            <div class="flex justify-between">
+              <span class="italic font-normal text-[#515151] text-sm">مساحة. m2</span>
+              <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+            </div>
+          </div>
+          <div class="content">
+            <div class="search">
+              <input spellcheck="false" type="text" placeholder="Search">
+            </div>
+            <ul class="options"></ul>
+          </div>
+        </div>
+        <div class="border h-[50px]"></div>
+        <div class="flex-1 wrapper">
+          <div class="select-btn flex flex-col">
+            <span class="mb-2">ميزانية</span>
+            <div class="flex justify-between">
+              <span class="italic font-normal text-[#515151] text-sm">أدنى سعر - أقصى سعر</span>
+              <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+            </div>
+          </div>
+          <div class="content">
+            <div class="search">
+              <input spellcheck="false" type="text" placeholder="Search">
+            </div>
+            <ul class="options"></ul>
+          </div>
+        </div>
+        <div class="border h-[50px]"></div>
+        <div class="flex-1 wrapper">
+          <div class="select-btn flex flex-col">
+            <span class="mb-2">المشاريع</span>
+            <div class="flex justify-between">
+              <span class="italic font-normal text-[#515151] text-sm">الجميع</span>
+              <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+            </div>
+          </div>
+          <div class="content">
+            <div class="search">
+              <input spellcheck="false" type="text" placeholder="Search">
+            </div>
+            <ul class="options"></ul>
+          </div>
+        </div>
+        <div class="border h-[50px]"></div>
+        <div class="flex-1 wrapper">
+          <div class="select-btn flex flex-col">
+            <span class="mb-2">مدينة</span>
+            <div class="flex justify-between">
+              <span class="italic font-normal text-[#515151] text-sm">أدخل المدينة</span>
+              <img src="./images/down-arrow.svg" alt="bottom arrow" width="10">
+            </div>
+          </div>
+          <div class="content">
+            <div class="search">
+              <input spellcheck="false" type="text" placeholder="Search">
+            </div>
+            <ul class="options"></ul>
+          </div>
+        </div>
+        <div class="bg-darkBlue2 w-[90px] aspect-square rounded-lg flex cursor-pointer">
+          <img src="./images/search.svg" alt="search" width="25" class="m-auto">
+        </div>
+      </div>
+      <button type="submit" class="flex grow m-auto md:hidden items-center justify-center text-darkBlue2  bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-lg px-5 py-2.5 text-center shadow-2xl" data-modal-toggle="mobileFilters">
+        <img src="./images/search.svg" alt="search" class="ltr:mr-3 rtl:ml-3 invert">
+        Recherche
+      </button>
+      <!-- Main modal -->
+      <div id="mobileFilters" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center m-auto">
+        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow">
+            <button type="button" class="absolute top-3 ltr:right-2.5 rtl:left-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="mobileFilters">
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+            <div class="py-6 px-6 lg:px-8">
+              <h3 class="m-4 ltr:ml-0 rtl:mr-0 text-xl font-bold text-darkBlue2">Trouver votre appartement de rêve</h3>
+              <form class="space-y-6" action="#">
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Ville</label>
+                  <div class="flex-1 wrapper">
+                    <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                      <span class="mb-2">saisissez une ville</span>
+                    </div>
+                    <div class="content">
+                      <div class="search">
+                        <input spellcheck="false" type="text" placeholder="Search">
+                      </div>
+                      <ul class="options"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Projets</label>
+                  <div class="flex-1 wrapper">
+                    <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                      <span class="mb-2">Toutes</span>
+                    </div>
+                    <div class="content">
+                      <div class="search">
+                        <input spellcheck="false" type="text" placeholder="Search">
+                      </div>
+                      <ul class="options"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Budget</label>
+                  <div class="flex-1 wrapper">
+                    <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                      <span class="mb-2">Prix min - Prix max</span>
+                    </div>
+                    <div class="content">
+                      <div class="search">
+                        <input spellcheck="false" type="text" placeholder="Search">
+                      </div>
+                      <ul class="options"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-bold text-darkBlue2">Superficie</label>
+                  <div class="flex-1 wrapper">
+                    <div class="select-btn bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                      <span class="mb-2">Surface min. m2</span>
+                    </div>
+                    <div class="content">
+                      <div class="search">
+                        <input spellcheck="false" type="text" placeholder="Search">
+                      </div>
+                      <ul class="options"></ul>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="flex items-center justify-center w-full text-white bg-darkBlue2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                  <img src="./images/search.svg" alt="search" class="ltr:mr-3 rtl:ml-3">
+                  recherche
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END FILTER -->
+  </header>
+  <!-- END HEADER -->
+
+  <!-- OUR PRODUCTS -->
+  <section class="container bllg:max-w-full my-16">
+    <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">منتجاتنا</h4>
+    <div class="flex px-3 lg:px-0 lg:justify-center flex-nowrap gap-3 overflow-x-auto">
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">شقق سكنية</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">مكاتب</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">مباني تجارية</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/terrain.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">أراضي</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END OUR PRODUCTS -->
+
+  <!-- IN PROGRESS PROJECTS -->
+  <section class="relative" data-carousel="static">
+    <div dir="ltr" class="absolute flex top-[230px] md:bottom-4 md:top-auto ltr:right-5 rtl:left-5 z-30">
+      <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-prev="">
+        <img src="./images/arrow-left.svg" alt="" width="50" class="opacity-60">
+      </button>
+      <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-next="">
+        <img src="./images/arrow-right.svg" alt="" width="50">
+      </button>
+    </div>
+    <div class="relative h-[300px] md:h-auto md:min-h-[400px] w-screen aspect-[2.64] overflow-hidden z-10">
+      <!-- Item 1 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item=""></div>
+      <!-- Item 2 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="active"></div>
+      <!-- Item 3 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item=""></div>
+      <!-- Item 4 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
+      <!-- Item 5 -->
+      <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
+    </div>
+    <div class="md:absolute top-0 w-full md:w-5/12 bg-darkBlue2 md:bg-[#003D71A1] h-full z-30 flex p-10 md:px-7">
+      <div class="m-auto md:max-grow-0 md:shrink-0 md:basis-[80%] text-white px-4">
+        <h4 class="text-3xl font-bold mb-3">المشاريع الحالية</h4>
+        <p class="mb-14">دائمًا في خدمة الناس ، تطلق SAMA Immobilier مشاريع جديدة لتوفر لك مساحة أكبر ومزيدًا من الحرية.</p>
+        <a class="p-4 px-6 bg-white text-darkBlue2 font-bold rounded-lg">شاهد المزيد</a>
+      </div>
+    </div>
+  </section>
+  <!-- END IN PROGRESS PROJECTS -->
+
+  <!-- SERVICES -->
+  <section class="my-16">
+    <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">خدماتنا</h4>
+    <div class="container bllg:max-w-full lg:flex justify-center items-center md:block lg:gap-16 lg:px-0 px-4">
+      <div
+        class="lg:w-6/12 rounded-lg sm:w-[100%] bg-no-repeat bg-center bg-cover aspect-[16/7] lg:aspect-square sm:min-w-[500px] lg:max-w-[700px] mb-8 lg:mb-0"
+        style="background-image: url('./images/homeKey.jpg')"></div>
+      <div class="lg:w-6/12 md:w-full h-full">
+        <div class="content-between">
+          <div class="flex flex-row lg:mb-16 mb-9 sm:mb-10">
+            <div class="h-iconeHomeBlock sm:h-auto w-[10%] sm:w-auto">
+              <img
+                class="lg:w-[50px] lg:h-[80px] h-[80px] w-[80px] sm:h-[100px] sm:w-[100px]"
+                src="./images/casque.svg"
+                alt="" />
+            </div>
+            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ltr:ml-3 rtl:mr-3 ltr:sm:ml-4 rtl:sm:mr-4">
+              <h1
+                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ltr:ml-2 rtl:mr-2">
+                إستشارة
+              </h1>
+              <p class="ltr:ml-2 rtl:mr-2 lg:text-xl sm:text-[16px]">
+                هل أنت بحاجة إلى معلومات إضافية؟ خبراؤنا في خدمتك.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-row lg:mb-16 mb-9 sm:mb-10">
+            <div class="h-iconeHomeBlock sm:h-auto w-[10%] sm:w-auto">
+              <img
+                class="lg:w-[50px] lg:h-[80px] h-[80px] w-[80px] sm:h-[100px] sm:w-[100px]"
+                src="./images/Group.svg"
+                alt="" />
+            </div>
+            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ltr:ml-3 rtl:mr-3 ltr:sm:ml-4 rtl:sm:mr-4">
+              <h1
+                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ltr:ml-2 rtl:mr-2">
+                مواكبة
+              </h1>
+              <p class="ltr:ml-2 rtl:mr-2 lg:text-xl sm:text-[16px]">
+                أنت في صميم اهتماماتنا ، نحن ندعمك ونساعدك في الحصول على تجربة رائعة في شراء الممتلكات الخاصة بك.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-row">
+            <div class="h-iconeHomeBlock sm:h-auto w-[10%] sm:w-auto">
+              <img
+                class="lg:w-[50px] lg:h-[80px] h-[80px] w-[80px] sm:h-[100px] sm:w-[100px]"
+                src="./images/params.svg"
+                alt="" />
+            </div>
+            <div class="w-[90%] lg:w-[90%] -translate-y-[-17px] lg:-translate-y-0 ltr:ml-3 rtl:mr-3 ltr:sm:ml-4 rtl:sm:mr-4">
+              <h1
+                class="font-bold text-darkBlue2 text-2xl sm:mb-0 mb-4 lg:mb-8 lg:mt-5 ltr:ml-2 rtl:mr-2">
+                خدمة ما بعد البيع
+              </h1>
+              <p class="ltr:ml-2 rtl:mr-2 lg:text-xl sm:text-[16px]">
+                تضع SAMA Immobilier فرقها الفنية تحت تصرفك لتلبية احتياجاتك ومعالجة طلباتك في مختلف المهن.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex justify-center mt-10">
+      <a class="font-bold underline text-darkBlue2 text-2xl" href="#">شاهد المزيد</a>
+    </div>
+  </section>
+  <!-- END SERVICES -->
+
+  <!-- REALISATIONS -->
+  <section class="bg-[#F5F7F9] py-[80px]" data-carousel="static">
+    <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">إنجازاتنا</h4>
+    <div class="overflow-hidden z-10 sm:h-[290px] md:h-[320px] lg:h-[370px] xl:h-[380px] relative hidden md:block">
+      <div class="container w-full h-full flex justify-center items-start gap-3 duration-700 ease-in-out transition-all slide-item transform -translate-x-full z-10" data-carousel-item="">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                كوستا بيتش
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container w-full h-full flex justify-center items-start gap-3 duration-700 ease-in-out transition-all slide-item transform -translate-x-full z-10" data-carousel-item="">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container w-full h-full flex justify-center items-start gap-3 duration-700 ease-in-out transition-all slide-item transform -translate-x-full z-10" data-carousel-item="">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                ياسمين
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">مساكن شاطئية في بوزنيقة</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div dir="ltr" class="container hidden md:flex justify-end mt-12">
+      <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-prev="">
+        <img src="./images/arrow-left.svg" alt="" width="50" class="opacity-60">
+      </button>
+      <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" data-carousel-next="">
+        <img src="./images/arrow-right.svg" alt="" width="50">
+      </button>
+    </div>
+    <div class="flex md:hidden px-3 lg:px-0 lg:justify-center flex-nowrap gap-3 overflow-x-auto">
+      <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
+        <a href="#">
+          <img
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+            src="./images/Firdaous_Slide_Visuels.png"
+            alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+          <a href="#">
+            <h5
+              class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+              ياسمين
+            </h5>
+            <div class="flex">
+              <img
+                class="h-[20px] w-[20px] hidden lg:block"
+                src="./images/gps.svg"
+                alt="" />
+              <p class="">مساكن شاطئية في بوزنيقة</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
+        <a href="#">
+          <img
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+            src="./images/Firdaous_Slide_Visuels.png"
+            alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+          <a href="#">
+            <h5
+              class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+              ياسمين
+            </h5>
+            <div class="flex">
+              <img
+                class="h-[20px] w-[20px] hidden lg:block"
+                src="./images/gps.svg"
+                alt="" />
+              <p class="">مساكن شاطئية في بوزنيقة</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
+        <a href="#">
+          <img
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+            src="./images/Firdaous_Slide_Visuels.png"
+            alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+          <a href="#">
+            <h5
+              class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+              ياسمين
+            </h5>
+            <div class="flex">
+              <img
+                class="h-[20px] w-[20px] hidden lg:block"
+                src="./images/gps.svg"
+                alt="" />
+              <p class="">مساكن شاطئية في بوزنيقة</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
+        <a href="#">
+          <img
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+            src="./images/Firdaous_Slide_Visuels.png"
+            alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+          <a href="#">
+            <h5
+              class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+              ياسمين
+            </h5>
+            <div class="flex">
+              <img
+                class="h-[20px] w-[20px] hidden lg:block"
+                src="./images/gps.svg"
+                alt="" />
+              <p class="">مساكن شاطئية في بوزنيقة</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END REALISATIONS -->
+
+  <!-- LAST ARTICLES -->
+  <section class="grid md:grid-cols-12 py-24">
+    <div class="md:col-span-4 flex">
+      <div class="m-auto text-center ltr:md:text-left rtl:md:text-right md:w-1/2">
+        <span class="hidden md:block font-medium text-2xl mb-6 text-darkBlue2">المدونة</span>
+        <h4 class="font-bold text-4xl mb-7 text-darkBlue2">أحدث مقالاتنا</h4>
+        <p class="text-xl">كل الأخبار عن قطاع العقارات</p>
+        <div dir="ltr" class="container hidden md:flex md:gap-x-8 mt-12">
+          <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" onclick="articlesCarousel?.scrollBy(-390,0)">
+            <img src="./images/arrow-left.svg" alt="" width="80" class="opacity-60">
+          </button>
+          <button type="button" class="flex items-center justify-center h-full px-1 cursor-pointer group focus:outline-none" onclick="articlesCarousel?.scrollBy(390,0)">
+            <img src="./images/arrow-right.svg" alt="" width="80">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="articlesCarousel" class="flex flex-nowrap gap-3 overflow-x-auto md:col-span-8 mt-24 md:mt-0 ltr:pl-3 rtl:pr-3 ltr:md:pl-0 rtl:md:pr-0 scroll-smooth hide-scrollbar">
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            أحدث مقالاتنا
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            مارس 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
+              <li>
+                اطرح الأسئلة الصحيحة (الموقع ، الميزانية ، عدد الغرف ، الشرفة ، إلخ.)
+              </li>
+              <li> تحديد التفضيلات والأولويات</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            أحدث مقالاتنا
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            مارس 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
+              <li>
+                اطرح الأسئلة الصحيحة (الموقع ، الميزانية ، عدد الغرف ، الشرفة ، إلخ.)
+              </li>
+              <li> تحديد التفضيلات والأولويات</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            أحدث مقالاتنا
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            مارس 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
+              <li>
+                اطرح الأسئلة الصحيحة (الموقع ، الميزانية ، عدد الغرف ، الشرفة ، إلخ.)
+              </li>
+              <li> تحديد التفضيلات والأولويات</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            أحدث مقالاتنا
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            مارس 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
+              <li>
+                اطرح الأسئلة الصحيحة (الموقع ، الميزانية ، عدد الغرف ، الشرفة ، إلخ.)
+              </li>
+              <li> تحديد التفضيلات والأولويات</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+      <div
+        class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
+        <a href="#">
+          <img
+            class="rounded-t-lg w-full md:h-[300px]"
+            src="./images/secondeCard.png"
+            alt="" />
+        </a>
+        <div class="p-5 pb-9">
+          <h5
+            class="text-xl font-bold text-darkBlue2 tracking-tight mb-5">
+            أحدث مقالاتنا
+          </h5>
+          <p class="mb-3 font-normal text-gray-700">
+            مارس 05, 2022
+          </p>
+          <div>
+            <ul class="list-decimal mb-4 ltr:pl-4 rtl:pr-4">
+              <li>
+                اطرح الأسئلة الصحيحة (الموقع ، الميزانية ، عدد الغرف ، الشرفة ، إلخ.)
+              </li>
+              <li> تحديد التفضيلات والأولويات</li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between items-center">
+            <p class="font-bold text-darkBlue2">Lire plus</p>
+            <img src="./images/arrow-right.png" class="h-[15px] rtl:-rotate-180" alt="" />
+          </div>
+        </div>
+        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 rounded-b-lg h-[15px] w-full bg-darkBlue2"></div>
+      </div>
+    </div>
+  </section>
+  <!-- END LAST ARTICLES -->
+
+  <!-- QUESTIONS -->
+  <section class="w-full md:flex">
+    <div
+      class="md:w-[46%] w-full lg:h-auto h-[300px] bg-cover bg-center"
+      style="background-image: url('./images/sammBGblue.png');"></div>
+    <div class="md:w-[54%] bg-lightBlue md:h-auto">
+      <div class="py-10 ltr:pl-7 rtl:pr-7 lg:pt-20 ltr:lg:pl-16 rtl:lg:pr-16">
+        <h1
+          class="lg:text-[48px] text-2xl w-[90%] font-bold text-darkBlue2 tracking-tight lg:mb-14 mb-6">
+          اقرأ المزيد هل لديك أسئلة؟
+        </h1>
+        <p class="lg:text-[20px] mb-8 w-[90%] lg:mb-16">
+          رضاك هو أولويتنا ؛ لنجعل حلمك يتحقق معًا!
+        </p>
+        <button
+          type="button"
+          class="text-white bg-darkBlue lg:font-bold lg:text-[20px] lg:h-[64px] w-[240px] h-[52px] bg-darkBlue4 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 ltr:mr-2 rtl:ml-2 mb-2 focus:outline-none">
+          اتصل بنا
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- END QUESTIONS -->
+
+  <!-- FOOTER -->
+  <footer class="flex p-8 bg-darkBlue2 text-white bg-contain bg-center bg-no-repeat min-h-[500px]"
+    style="background-image: url('../images/arabic-letter.png');">
+    <div class="grid sm:grid-cols-2 md:grid-cols-9 gap-2 m-auto">
+      <div class="md:col-span-2 sm:mt-9 md:mt-0">
+        <a>
+          <img src="./images/white-logo.png" width="200" alt="Samma Logo" class="-ltr:ml-3 rtl:mr-3">
+        </a>
+        <span>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</span>
+      </div>
+      <div class="md:col-span-2 md:col-start-4 mt-12 md:mt-0">
+        <h2 class="mb-10 text-sm font-bold uppercase">روابط سريعة</h2>
+        <ul>
+          <li class="mb-4">
+            <a class="hover:underline">الرئيسية</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline">منتجاتنا</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline">خدماتنا</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline">المدونة</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline">من نحن</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline">اتصل بنا</a>
+          </li>
+          <li class="mb-4">
+            <a href="https://flowbite.com/">Flowbite</a>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-2 mt-12 md:mt-0">
+        <h2 class="mb-10 text-sm font-bold uppercase">خدمات</h2>
+        <ul>
+          <li class="mb-4">
+            <a class="hover:underline ">من نحن</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline ">الأحكام والشروط</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline ">مركز الدعم</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline ">المدونة</a>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-2 mt-12 md:mt-0">
+        <h2 class="mb-10 text-sm font-bold uppercase">اتصل بنا</h2>
+        <ul>
+          <li class="mb-4">
+            <a class="hover:underline">Privacy Policy</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline">+212 660 01 02 03</a>
+          </li>
+          <li class="mb-4">
+            <a class="hover:underline">contact@example.com</a>
+          </li>
+          <li class="mt-10">
+            <div class="flex space-x-2 rtl:space-x-reverse">
+              <a><img src="./images/facebook.png" alt="Facebook" width="40"></a>
+              <a><img src="./images/instagram.png" alt="Instagram" width="40"></a>
+              <a><img src="./images/twitter.png" alt="Twitter" width="40"></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+  <script src="./js/flowbite.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

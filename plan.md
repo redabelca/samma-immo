@@ -84,7 +84,7 @@ FIXES
 11. [DONE] - .5h - gallery modal + close button
 9. [DONE] - 2h - paddings / margins / heights
   16. pdf file
-19. must be duplicated changes
+19. [DONE] - must be duplicated changes
 14. for arabic use arabic text
 
 5. ? - Quelques remarques : popup de recherche qui déborde, le bouton fermer ne marche pas
