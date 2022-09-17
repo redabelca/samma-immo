@@ -15,37 +15,36 @@
 <body>
 
   <!-- NAV -->
-  <nav class="bg-white border-gray-200 px-2 md:px-4 py-2.5 rounded text-darkBlue2">
+  <nav class="bg-white border-gray-200 px-2 md:px-4 py-5 rounded text-darkBlue2">
     <div class="container relative flex flex-wrap justify-between items-center">
       <a class="flex items-center">
-        <img src="./images/logosama.svg" class="w-24 md:w-32" alt="Samma Logo">
+        <img src="./images/logosama.svg" class="w-24 md:w-36" alt="Samma Logo">
       </a>
       <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ltr:ml-3 rtl:mr-3 text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
-        <span class="inline-flex md:hidden font-semibold">Menu</span>
         <svg id="humburger" class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
         </svg>
         <img id="x-icon" class="p-1" src="./images/x.svg" alt="x" width="24">
       </button>
-      <div class="hidden absolute w-[calc(100%_+_1.55rem)] -ltr:ml-4 rtl:mr-4 top-[calc(40px_-_.5rem)] md:block md:static md:w-auto" id="navbar-default">
-        <ul class="flex flex-col items-center p-4 mt-4 rounded-lg bg-darkBlue2 md:bg-inherit text-white md:text-inherit md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:text-sm md:font-semibold">
+      <div class="hidden absolute w-[calc(100%_+_1.55rem)] ltr:-ml-4 rtl:mr-4 top-[calc(40px_-_.5rem)] md:block md:static md:w-auto z-[50]" id="navbar-default">
+        <ul class="flex flex-col items-center p-4 mt-4 rounded-lg bg-darkBlue2 md:bg-inherit text-white md:text-inherit md:flex-row md:space-x-7 xl:space-x-9 rtl:space-x-reverse md:mt-0 md:text-sm md:font-semibold">
           <li>
-            <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Accueil</a>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">Accueil</a>
           </li>
           <li>
-            <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Nos produits</a>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">Nos produits</a>
           </li>
           <li>
-            <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Nos Service</a>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">Nos Service</a>
           </li>
           <li>
-            <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Blog</a>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">Blog</a>
           </li>
           <li>
-            <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Qui somme nous</a>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">Qui somme nous</a>
           </li>
           <li>
-            <a class="block py-2 rounded hover:bg-gray-100 hover:text-darkBlue2 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contactez nous</a>
+            <a class="block py-2 rounded text-base hover:bg-gray-100 hover:text-darkBlue2 hover:font-bold active:font-bold md:hover:bg-transparent md:border-0 md:p-0">Contactez nous</a>
           </li>
           <li>
             <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="focus:outline-none font-semibold rounded-lg text-sm text-center inline-flex items-center   " type="button">
@@ -72,24 +71,26 @@
 
   <!-- HEADER -->
   <header class="container">
-    <div class="h-[calc(100vh_-_130px)] relative max-h-[900px] min-h-[350px] bg-center bg-cover bg-no-repeat overflow-hidden grid md:grid-cols-2 md:items-center md:justify-items-center p-9 md:p-0" style="background-image: linear-gradient(271deg, #0000004e 0%, #00000000 100%), url('./images/building.png');">
-      <div class="text-darkBlue3 z-10">
-        <h2 class="text-3xl md:text-4xl font-bold">SAMA Immobilier</h2>
+    <div class="md:h-[calc(100vh_-_170px)] relative max-h-[600px] md:min-h-[450px] bg-center bg-cover bg-no-repeat overflow-hidden grid md:grid-cols-2 md:items-center md:justify-items-center p-9 md:p-0" style="background-image: linear-gradient(90deg, #000000d0 0%, #00000000 100%), url('./images/bg\ sama.png');">
+      <div class="text-white z-10" id="headerTextContent">
+        <h2 class="text-5xl md:text-4xl font-bold">SAMA Immobilier</h2>
         <p>Votre partenaire immobilier de confiance</p>
       </div>
-      <img src="./images/play-video.svg" alt="" width="150" class="z-10">
+      <img
+        id="headerPlayButton" src="./images/play-video.svg" alt="" width="150" class="z-10 cursor-pointer">
       <video
+        id="headerVideo"
         src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov"
-        playsinline autoplay muted loop
-        class="absolute hidden z-0 top-1/2 ltr:left-1/2 rtl:right-1/2 w-full h-full ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 object-cover"></video>
+        class="absolute hidden z-20 top-1/2 ltr:left-1/2 rtl:right-1/2 w-full h-full ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 object-cover"></video>
+      <!-- playsinline autoplay muted loop -->
     </div>
 
     <!-- FILTER -->
-    <div class="flex z-10 relative flex-col md:items-start font-bold md:-mt-28 md:w-[90%] m-auto -mt-6">
+    <div class="flex relative z-50 flex-col md:items-start font-bold md:-mt-28 md:w-[90%] m-auto -mt-6">
       <div class="hidden md:block bg-white p-5 ltr:pr-8 rtl:pl-8 rounded-t-lg">
         <h5 class="text-darkBlue2">Trouver votre appartement de rêve</h5>
       </div>
-      <div class="hidden md:flex items-center bg-white p-3 ltr:pl-5 rtl:pr-5 ltr:rounded-tr rtl:rounded-tl-lg rounded-b-lg w-full shadow-lg space-x-3 rtl:space-x-reverse">
+      <div class="hidden md:flex items-center bg-white p-3 ltr:pl-5 rtl:pr-5 ltr:rounded-tr rtl:rounded-tl-lg rounded-b-lg w-full shadow-2xl space-x-3 rtl:space-x-reverse">
         <div class="flex-1 wrapper">
           <div class="select-btn flex flex-col">
             <span class="mb-2">Ville</span>
@@ -153,11 +154,11 @@
             <ul class="options"></ul>
           </div>
         </div>
-        <div class="bg-darkBlue2 w-[70px] aspect-square rounded-lg flex cursor-pointer">
+        <div class="bg-darkBlue2 w-[90px] aspect-square rounded-lg flex cursor-pointer">
           <img src="./images/search.svg" alt="search" width="25" class="m-auto">
         </div>
       </div>
-      <button type="submit" class="flex grow m-auto md:hidden items-center justify-center text-darkBlue2  bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-lg px-5 py-2.5 text-center shadow-lg" data-modal-toggle="mobileFilters">
+      <button type="submit" class="flex grow m-auto md:hidden items-center justify-center text-darkBlue2  bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-lg px-5 py-2.5 text-center shadow-2xl" data-modal-toggle="mobileFilters">
         <img src="./images/search.svg" alt="search" class="ltr:mr-3 rtl:ml-3 invert">
         Recherche
       </button>
@@ -165,7 +166,7 @@
       <div id="mobileFilters" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center m-auto">
         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
           <!-- Modal content -->
-          <div class="relative bg-white rounded-lg shadow ">
+          <div class="relative bg-white rounded-lg shadow">
             <button type="button" class="absolute top-3 ltr:right-2.5 rtl:left-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="mobileFilters">
               <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -249,24 +250,44 @@
   <section class="container bllg:max-w-full my-16">
     <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">Nos produits</h4>
     <div class="flex px-3 lg:px-0 lg:justify-center flex-nowrap gap-3 overflow-x-auto">
-      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
-        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
-          <h6 class="font-bold text-white">Appartements</h6>
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">Appartements</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
-        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
-          <h6 class="font-bold text-white">Plateaux de bureaux</h6>
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">Plateaux de bureaux</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
-        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
-          <h6 class="font-bold text-white">Locaux commerciaux</h6>
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/Firdaous_Slide_Visuels.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">Locaux commerciaux</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/secondeCard.png');">
-        <div class="absolute bottom-0 ltr:left-0 rtl:right-0 p-4">
-          <h6 class="font-bold text-white">Lots de terrains</h6>
+      <div class="our-product-item aspect-square min-w-[250px] flex-1 rounded-lg bg-cover bg-center relative" style="background-image: linear-gradient(180deg, #00000000 60%, #000000ab 100%), url('./images/terrain.png');">
+        <div class="absolute p-4 top-[calc(100%_-_56px)] transition-all flex items-center w-full h-14">
+          <div class="text-white">
+            <h6 class="font-bold">Lots de terrains</h6>
+            <p class="hidden">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam mollitia.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -283,7 +304,7 @@
         <img src="./images/arrow-right.svg" alt="" width="50">
       </button>
     </div>
-    <div class="relative h-[300px] md:h-[500px] overflow-hidden z-10">
+    <div class="relative h-[300px] md:h-auto md:min-h-[400px] w-screen aspect-[2.64] overflow-hidden z-10">
       <!-- Item 1 -->
       <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item=""></div>
       <!-- Item 2 -->
@@ -296,7 +317,7 @@
       <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
     </div>
     <div class="md:absolute top-0 w-full md:w-5/12 bg-darkBlue2 md:bg-[#003D71A1] h-full z-30 flex p-10 md:px-7">
-      <div class="m-auto md:max-grow-0 shrink-0 basis-[400px] text-white">
+      <div class="m-auto md:max-grow-0 md:shrink-0 md:basis-[80%] text-white px-4">
         <h4 class="text-3xl font-bold mb-3">Projets en cours</h4>
         <p class="mb-14">Toujours au service de l’humain, SAMA Immobilier lance de nouveaux projets pour vous offrir plus d’espace et plus de liberté</p>
         <a class="p-4 px-6 bg-white text-darkBlue2 font-bold rounded-lg">Voir plus</a>
@@ -308,9 +329,10 @@
   <!-- SERVICES -->
   <section class="my-16">
     <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">Nos services</h4>
-    <div class="container bllg:max-w-full lg:flex justify-center items-start md:block lg:gap-16 lg:px-0 px-4">
+    <div class="container bllg:max-w-full lg:flex justify-center items-center md:block lg:gap-16 lg:px-0 px-4">
       <div
-        class="bg-[url('../images/homeKey.jpg')] lg:w-6/12 rounded-lg sm:w-[100%] bg-no-repeat bg-center bg-cover aspect-[16/7] lg:aspect-square sm:min-w-[500px] lg:max-w-[700px] mb-8 lg:mb-0"></div>
+        class="lg:w-6/12 rounded-lg sm:w-[100%] bg-no-repeat bg-center bg-cover aspect-[16/7] lg:aspect-square sm:min-w-[500px] lg:max-w-[700px] mb-8 lg:mb-0"
+        style="background-image: url('./images/homeKey.jpg')"></div>
       <div class="lg:w-6/12 md:w-full h-full">
         <div class="content-between">
           <div class="flex flex-row lg:mb-16 mb-9 sm:mb-10">
@@ -350,7 +372,7 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-row lg:mb-16 mb-9 sm:mb-10">
+          <div class="flex flex-row">
             <div class="h-iconeHomeBlock sm:h-auto w-[10%] sm:w-auto">
               <img
                 class="lg:w-[50px] lg:h-[80px] h-[80px] w-[80px] sm:h-[100px] sm:w-[100px]"
@@ -381,12 +403,12 @@
   <!-- REALISATIONS -->
   <section class="bg-[#F5F7F9] py-[80px]" data-carousel="static">
     <h4 class="text-4xl font-bold text-center text-darkBlue2 mb-16">Nos réalisations</h4>
-    <div class="overflow-hidden z-10 sm:h-[290px] md:h-[320px] lg:h-[370px] xl:h-[440px] 2xl:h-[500px] relative hidden md:block">
-      <div class="container w-full h-full flex gap-3 duration-700 ease-in-out transition-all slide-item transform -translate-x-full z-10" data-carousel-item="">
-        <div class="bg-white rounded-lg shadow-md">
+    <div class="overflow-hidden z-10 sm:h-[290px] md:h-[320px] lg:h-[370px] xl:h-[380px] relative hidden md:block">
+      <div class="container w-full h-full flex justify-center items-start gap-3 duration-700 ease-in-out transition-all slide-item transform -translate-x-full z-10" data-carousel-item="">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -406,10 +428,10 @@
             </a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -429,10 +451,10 @@
             </a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -452,104 +474,10 @@
             </a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
-              src="./images/Firdaous_Slide_Visuels.png"
-              alt="product image" />
-          </a>
-          <div class="px-5 pb-5">
-            <a href="#">
-              <h5
-                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
-                Firdaous
-              </h5>
-              <div class="flex">
-                <img
-                  class="h-[20px] w-[20px] hidden lg:block"
-                  src="./images/gps.svg"
-                  alt="" />
-                <p class="">Résidences à Bouznika</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="container w-full h-full flex gap-3 duration-700 ease-in-out transition-all slide-item transform translate-x-0 z-20" data-carousel-item="active">
-        <div class="bg-white rounded-lg shadow-md">
-          <a href="#">
-            <img
-              class="rounded-t-lg mb-6"
-              src="./images/Firdaous_Slide_Visuels.png"
-              alt="product image" />
-          </a>
-          <div class="px-5 pb-5">
-            <a href="#">
-              <h5
-                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
-                Firdaous
-              </h5>
-              <div class="flex">
-                <img
-                  class="h-[20px] w-[20px] hidden lg:block"
-                  src="./images/gps.svg"
-                  alt="" />
-                <p class="">Résidences à Bouznika</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md">
-          <a href="#">
-            <img
-              class="rounded-t-lg mb-6"
-              src="./images/Firdaous_Slide_Visuels.png"
-              alt="product image" />
-          </a>
-          <div class="px-5 pb-5">
-            <a href="#">
-              <h5
-                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
-                Firdaous
-              </h5>
-              <div class="flex">
-                <img
-                  class="h-[20px] w-[20px] hidden lg:block"
-                  src="./images/gps.svg"
-                  alt="" />
-                <p class="">Résidences à Bouznika</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md">
-          <a href="#">
-            <img
-              class="rounded-t-lg mb-6"
-              src="./images/Firdaous_Slide_Visuels.png"
-              alt="product image" />
-          </a>
-          <div class="px-5 pb-5">
-            <a href="#">
-              <h5
-                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
-                Firdaous
-              </h5>
-              <div class="flex">
-                <img
-                  class="h-[20px] w-[20px] hidden lg:block"
-                  src="./images/gps.svg"
-                  alt="" />
-                <p class="">Résidences à Bouznika</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md">
-          <a href="#">
-            <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -570,11 +498,11 @@
           </div>
         </div>
       </div>
-      <div class="container w-full h-full flex gap-3 duration-700 ease-in-out transition-all slide-item transform translate-x-full z-10" data-carousel-item="">
-        <div class="bg-white rounded-lg shadow-md">
+      <div class="container w-full h-full flex justify-center items-start gap-3 duration-700 ease-in-out transition-all slide-item transform -translate-x-full z-10" data-carousel-item="">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -594,10 +522,10 @@
             </a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -617,10 +545,10 @@
             </a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -640,10 +568,104 @@
             </a>
           </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
           <a href="#">
             <img
-              class="rounded-t-lg mb-6"
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                Firdaous
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">Résidences à Bouznika</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container w-full h-full flex justify-center items-start gap-3 duration-700 ease-in-out transition-all slide-item transform -translate-x-full z-10" data-carousel-item="">
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                Firdaous
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">Résidences à Bouznika</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                Firdaous
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">Résidences à Bouznika</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
+              src="./images/Firdaous_Slide_Visuels.png"
+              alt="product image" />
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <h5
+                class="text-xl font-bold text-darkBlue2 tracking-tight mb-1">
+                Firdaous
+              </h5>
+              <div class="flex">
+                <img
+                  class="h-[20px] w-[20px] hidden lg:block"
+                  src="./images/gps.svg"
+                  alt="" />
+                <p class="">Résidences à Bouznika</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md h-fit max-w-[380px]">
+          <a href="#">
+            <img
+              class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
               src="./images/Firdaous_Slide_Visuels.png"
               alt="product image" />
           </a>
@@ -677,7 +699,7 @@
       <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
         <a href="#">
           <img
-            class="rounded-t-lg mb-6"
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
             src="./images/Firdaous_Slide_Visuels.png"
             alt="product image" />
         </a>
@@ -700,7 +722,7 @@
       <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
         <a href="#">
           <img
-            class="rounded-t-lg mb-6"
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
             src="./images/Firdaous_Slide_Visuels.png"
             alt="product image" />
         </a>
@@ -723,7 +745,7 @@
       <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
         <a href="#">
           <img
-            class="rounded-t-lg mb-6"
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
             src="./images/Firdaous_Slide_Visuels.png"
             alt="product image" />
         </a>
@@ -746,7 +768,7 @@
       <div class="bg-white rounded-lg shadow-md shrink-0 grow-0 basis-[320px]">
         <a href="#">
           <img
-            class="rounded-t-lg mb-6"
+            class="rounded-t-lg mb-6 aspect-[1.6] object-cover"
             src="./images/Firdaous_Slide_Visuels.png"
             alt="product image" />
         </a>
@@ -787,7 +809,7 @@
         </div>
       </div>
     </div>
-    <div id="articlesCarousel" class="flex flex-nowrap gap-3 overflow-x-auto md:col-span-8 mt-24 md:mt-0 ltr:pl-3 rtl:pr-3 ltr:md:pl-0 rtl:md:pr-0 scroll-smooth">
+    <div id="articlesCarousel" class="flex flex-nowrap gap-3 overflow-x-auto md:col-span-8 mt-24 md:mt-0 ltr:pl-3 rtl:pr-3 ltr:md:pl-0 rtl:md:pr-0 scroll-smooth hide-scrollbar">
       <div
         class="relative grow-0 shrink-0 basis-[400px] bg-white rounded-lg border border-gray-200 shadow-md">
         <a href="#">
@@ -955,7 +977,8 @@
   <!-- QUESTIONS -->
   <section class="w-full md:flex">
     <div
-      class="md:w-[46%] bg-[url('../images/sammBGblue.png')] w-full lg:h-auto h-[300px] bg-cover bg-center"></div>
+      class="md:w-[46%] w-full lg:h-auto h-[300px] bg-cover bg-center"
+      style="background-image: url('./images/sammBGblue.png');"></div>
     <div class="md:w-[54%] bg-lightBlue md:h-auto">
       <div class="py-10 ltr:pl-7 rtl:pr-7 lg:pt-20 ltr:lg:pl-16 rtl:lg:pr-16">
         <h1
@@ -977,7 +1000,8 @@
   <!-- END QUESTIONS -->
 
   <!-- FOOTER -->
-  <footer class="flex p-8 bg-darkBlue2 text-white bg-[url('../images/arabic-letter.png')] bg-contain bg-center bg-no-repeat min-h-[500px]">
+  <footer class="flex p-8 bg-darkBlue2 text-white bg-contain bg-center bg-no-repeat min-h-[500px]"
+    style="background-image: url('../images/arabic-letter.png');">
     <div class="grid sm:grid-cols-2 md:grid-cols-9 gap-2 m-auto">
       <div class="md:col-span-2 sm:mt-9 md:mt-0">
         <a>
@@ -1052,8 +1076,6 @@
     </div>
   </footer>
   <!-- END FOOTER -->
-
-
 
   <script src="./js/flowbite.js"></script>
   <script src="./js/main.js"></script>
