@@ -80,22 +80,68 @@
   <!-- END INNER-HEADER -->
 
   <!-- CARD-GRID -->
-  <div class="container -mt-14 z-10 relative grid grid-cols-6 lg:grid-rows-2 aspect-[1] lg:aspect-[3] gap-4 gap-y-10 lg:gap-y-4">
-    <div class="col-span-6 lg:col-span-4 col-start-1 row-span-2 row-start-1 h-full border rounded-lg bg-blog-home bg-no-repeat bg-cover relative">
+  <div class="container -mt-14 grid grid-cols-6 lg:grid-rows-2 aspect-[1] lg:aspect-[3] gap-4 gap-y-10 lg:gap-y-4">
+    <div class="col-span-6 lg:col-span-4 col-start-1 row-span-2 row-start-1 h-full border rounded-lg bg-no-repeat bg-cover bg-center relative" style="background-image: url('./images/Mask_group.png');">
       <img
-        class="absolute ltr:left-1/2 rtl:right-1/2 top-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 w-[85px] h-[85px]"
+        id="ourProductsVideoPlayButton"
+        class="absolute ltr:left-1/2 rtl:right-1/2 top-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 w-[85px] h-[85px] cursor-pointer"
         src="./images/iconPlay.svg"
         alt="" />
       <div
-        class="absolute bg-darkBlue2 text-center flex justify-center items-center rounded-md bottom-[-28px] ltr:left-3 rtl:right-3 text-white text-[12px] w-[250px] h-[55px]">
+        id="ourProductsBadge"
+        class="absolute bg-darkBlue2 z-30 text-center flex justify-center items-center rounded-md bottom-[-28px] ltr:left-3 rtl:right-3 text-white text-[12px] w-[250px] h-[55px]">
         <span class="mt-2"> À partir de </span>
         <span class="font-bold text-[22px] ltr:ml-2 rtl:mr-2"> 990 000 DH </span>
       </div>
+      <video
+        id="ourProductsVideo"
+        src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov"
+        class="absolute hidden z-20 top-1/2 ltr:left-1/2 rtl:right-1/2 w-full h-full ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2 object-cover"></video>
     </div>
-    <div class="bg-blog-home rounded-lg bg-no-repeat bg-cover col-span-2 lg:col-span-1"></div>
-    <div class="bg-blog-home rounded-lg bg-no-repeat bg-cover col-span-2 lg:col-span-1"></div>
-    <div class="bg-blog-home rounded-lg bg-no-repeat bg-cover col-span-2 lg:col-span-1"></div>
-    <div class="bg-blog-home rounded-lg bg-no-repeat bg-cover col-span-2 lg:col-span-1"></div>
+    <div class="cursor-pointer rounded-lg bg-no-repeat bg-center bg-cover col-span-2 lg:col-span-1" style="background-image: url('./images/Mask_group.png');" data-modal-toggle="photosSliderModal"></div>
+    <div class="cursor-pointer rounded-lg bg-no-repeat bg-center bg-cover col-span-2 lg:col-span-1" style="background-image: url('./images/Mask_group.png');" data-modal-toggle="photosSliderModal"></div>
+    <div class="cursor-pointer rounded-lg bg-no-repeat bg-center bg-cover col-span-2 lg:col-span-1" style="background-image: url('./images/Mask_group.png');" data-modal-toggle="photosSliderModal"></div>
+    <div class="cursor-pointer rounded-lg bg-no-repeat bg-center bg-cover col-span-2 lg:col-span-1" style="background-image: url('./images/Mask_group.png');" data-modal-toggle="photosSliderModal"></div>
+
+    <!-- Main modal -->
+    <div id="photosSliderModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center m-auto">
+      <div class="relative p-4 w-full h-full md:h-auto flex">
+        <!-- Modal content 960 560 2.63 -->
+        <div class="relative rounded-lg shadow w-8/12 min-w-[200px] max-w-[1200px] aspect-[1.64] m-auto" data-carousel="static">
+          <button type="button" class="absolute z-30 ltr:left-0 rtl:right-0 ltr:rotate-180 top-1/2 -translate-y-1/2 ltr:-translate-x-full rtl:translate-x-full flex items-center justify-center cursor-pointer group focus:outline-none py-4 px-3" data-carousel-prev="">
+            <img src="./images/forward_arrow_icon.png" alt="" width="36" class="invert">
+          </button>
+          <button type="button" class="absolute z-30 ltr:right-0 rtl:left-0 rtl:rotate-180 top-1/2 -translate-y-1/2 ltr:translate-x-full rtl:-translate-x-full flex items-center justify-center cursor-pointer group focus:outline-none py-4 px-3" data-carousel-next="">
+            <img src="./images/forward_arrow_icon.png" alt="" width="36" class="invert">
+          </button>
+          <div class="absolute flex bottom-4 ltr:left-1/2 rtl:right-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 z-30 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <div class="relative h-full overflow-hidden z-10">
+            <!-- Item 1 -->
+            <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item=""></div>
+            <!-- Item 2 -->
+            <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="active"></div>
+            <!-- Item 3 -->
+            <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item=""></div>
+            <!-- Item 4 -->
+            <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
+            <!-- Item 5 -->
+            <div style="background-image: url('./images/secondeCard.png');" class="bg-center bg-cover hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item=""></div>
+          </div>
+          <button type="button" class="absolute z-10 top-3 ltr:right-2.5 rtl:left-2.5 bg-gray-200 text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="photosSliderModal">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- END CARD-GRID -->
 
@@ -104,22 +150,22 @@
     <div class="">
       <div class="flex justify-between mb-10">
         <div class="flex items-end gap-2 p-2">
-          <img src="./images/Combined.png" alt="" class="w-[30px] basis-[30px] grow-0 shrink-0">
+          <img src="./images/Combined.png" alt="" class="w-[35px] basis-[35px] grow-0 shrink-0">
           <span class="text-sm">4 Beds</span>
         </div>
         <div class="flex items-end gap-2 p-2">
-          <img src="./images/Group131.png" alt="" class="w-[30px] basis-[30px] grow-0 shrink-0">
+          <img src="./images/Group131.png" alt="" class="w-[35px] basis-[35px] grow-0 shrink-0">
           <span class="text-sm">2 Baths</span>
         </div>
         <div class="flex items-end gap-2 p-2">
-          <img src="./images/Shape.png" alt="" class="w-[30px] basis-[30px] grow-0 shrink-0">
+          <img src="./images/Shape.png" alt="" class="w-[35px] basis-[35px] grow-0 shrink-0">
           <span class="text-sm">98 M2</span>
         </div>
       </div>
       <h1 class="text-[20px] font-bold text-darkBlue2 mb-4">
         Description de l’unité
       </h1>
-      <p class="text-[13px] text-gray2 leading-6 mb-5">
+      <p class="text-gray2 leading-6 mb-5">
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
         erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -267,7 +313,8 @@
   <!-- QUESTIONS -->
   <section class="w-full md:flex">
     <div
-      class="md:w-[46%] bg-[url('../images/sammBGblue.png')] w-full lg:h-auto h-[300px] bg-cover bg-center"></div>
+      style="background-image: url('./images/sammBGblue.png');"
+      class="md:w-[46%] w-full lg:h-auto h-[300px] bg-cover bg-center"></div>
     <div class="md:w-[54%] bg-lightBlue md:h-auto">
       <div class="py-10 ltr:pl-7 rtl:pr-7 lg:pt-20 ltr:lg:pl-16 rtl:lg:pr-16">
         <h1
@@ -289,7 +336,9 @@
   <!-- END QUESTIONS -->
 
   <!-- FOOTER -->
-  <footer class="flex p-8 bg-darkBlue2 text-white bg-[url('../images/arabic-letter.png')] bg-contain bg-center bg-no-repeat min-h-[500px]">
+  <footer
+    style="background-image: url('./images/arabic-letter.png');"
+    class="flex p-8 bg-darkBlue2 text-white bg-contain bg-center bg-no-repeat min-h-[500px]">
     <div class="grid sm:grid-cols-2 md:grid-cols-9 gap-2 m-auto">
       <div class="md:col-span-2 sm:mt-9 md:mt-0">
         <a>

@@ -58,31 +58,34 @@ space-x-$1 rtl:space-x-reverse
 
 
 
-open 1 - https://flourishing-hotteok-826cb0.netlify.app/blog-single.html
-open 2 - https://flourishing-hotteok-826cb0.netlify.app/contact-us.html
-open 3 - https://flourishing-hotteok-826cb0.netlify.app/our-products.html
-open 4 - https://flourishing-hotteok-826cb0.netlify.app/our-services.html
-open 5 - https://flourishing-hotteok-826cb0.netlify.app/who-are-we.html
-open 6 - https://flourishing-hotteok-826cb0.netlify.app/our-products-with-listing.html
-open 7 - https://flourishing-hotteok-826cb0.netlify.app/our-products-with-map.html
-open 8 - https://flourishing-hotteok-826cb0.netlify.app/our-products-with-filter.html
-open 9 - https://flourishing-hotteok-826cb0.netlify.app/blog.html
-open 10 - https://flourishing-hotteok-826cb0.netlify.app/index.html
+open http://127.0.0.1:5500/src/blog-single.html
+open http://127.0.0.1:5500/src/contact-us.html
+open http://127.0.0.1:5500/src/our-products.html
+open http://127.0.0.1:5500/src/our-services.html
+open http://127.0.0.1:5500/src/who-are-we.html
+open http://127.0.0.1:5500/src/our-products-with-listing.html
+open http://127.0.0.1:5500/src/our-products-with-map.html
+open http://127.0.0.1:5500/src/our-products-with-filter.html
+open http://127.0.0.1:5500/src/blog.html
+open http://127.0.0.1:5500/src/index.html
 
 
 FIXES
-1. nav items spacing 40px
-2. header height
-3. nav links hover to bold
-4. ? - conatiner tight and on some screens it is full width
-5. ? - Quelques remarques : popup de recherche qui déborde, le bouton fermer ne marche pas
-6. Menu ne s'affiche plus
-7. ? - On a un margin à droite qaund on ouvre le popup de recherche ------>, La marge occupe toute la partie droite de la page
-8. .5h - animation
-9. 2h - paddings / margins / heights
-10. .5h - header video
-11. .5h - gallery modal + close button
-12. dropdowns overlapping with below elements
-13. remobe bg-url / rename filenames
+1. [DONE] - nav items spacing 40px
+2. [DONE] - header height
+3. [DONE] - nav links hover to bold
+4. [DONE] - conatiner tight and on some screens it is full width
+6. [DONE] - Menu ne s'affiche plus
+12. [DONE] - dropdowns overlapping with below elements
+13. [DONE] - remove bg-url
+15. [DONE] - replace hero and terrain
+10. [DONE] - .2h - header video
+8. [DONE] - .5h - animation
+11. [DONE] - .5h - gallery modal + close button
+9. [DONE] - 2h - paddings / margins / heights
+  16. pdf file
+19. must be duplicated changes
 14. for arabic use arabic text
-15. pdf file
+
+5. ? - Quelques remarques : popup de recherche qui déborde, le bouton fermer ne marche pas
+7. ? - On a un margin à droite qaund on ouvre le popup de recherche ------>, La marge occupe toute la partie droite de la page

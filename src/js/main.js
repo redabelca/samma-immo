@@ -89,15 +89,90 @@ for (const wrapper of wrappers) {
       : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
   });
 
-  selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
+  selectBtn.addEventListener("click", () => {
+    !wrapper.classList.contains("open") && wrapper.classList.add("open");
+    wrappers.forEach(
+      (el) => !el.classList.contains("open") && el.classList.remove("active")
+    );
+    wrapper.classList.toggle("active");
+    wrapper.classList.remove("open");
+  });
 }
 
+// switch dir
 const switchDir = () =>
   document.documentElement.setAttribute(
     "dir",
     document.documentElement.dir == "ltr" ? "rtl" : "ltr"
   );
-
 switchDir();
-
 document.body.ondblclick = switchDir;
+
+// toggle header video
+if (typeof headerPlayButton !== "undefined") {
+  headerPlayButton.addEventListener("click", () => {
+    [headerPlayButton, headerVideo, headerTextContent].forEach((el) =>
+      el.classList.toggle("hidden")
+    );
+    headerVideo.play();
+  });
+}
+
+if (typeof headerVideo !== "undefined") {
+  headerVideo.addEventListener("click", () => {
+    headerVideo.pause();
+    [headerVideo, headerTextContent, headerPlayButton].forEach((el) =>
+      el.classList.toggle("hidden")
+    );
+  });
+}
+
+// our products animation
+document.querySelectorAll(".our-product-item").forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    el.querySelector(".absolute").classList.add(
+      "bg-[#003c717d]",
+      "h-full",
+      "top-0"
+    );
+    el.querySelector(".absolute").classList.remove(
+      "top-[calc(100%_-_56px)]",
+      "h-14"
+    );
+    el.querySelector("p").classList.toggle("hidden");
+    el.querySelector(".text-white").classList.toggle("text-center");
+  });
+  el.addEventListener("mouseleave", () => {
+    el.querySelector(".absolute").classList.remove(
+      "bg-[#003c717d]",
+      "h-full",
+      "top-0"
+    );
+    el.querySelector(".absolute").classList.add(
+      "top-[calc(100%_-_56px)]",
+      "h-14"
+    );
+    el.querySelector("p").classList.toggle("hidden");
+    el.querySelector(".text-white").classList.toggle("text-center");
+  });
+});
+
+// our products gallery
+// ourProductsVideoPlayButton - ourProductsBadge - ourProductsVideo
+if (typeof ourProductsVideoPlayButton !== "undefined") {
+  ourProductsVideoPlayButton.addEventListener("click", () => {
+    [ourProductsVideoPlayButton, ourProductsVideo].forEach((el) =>
+      el.classList.toggle("hidden")
+    );
+    ourProductsVideo.play();
+  });
+}
+
+if (typeof ourProductsVideo !== "undefined") {
+  ourProductsVideo.addEventListener("click", () => {
+    ourProductsVideo.pause();
+    [ourProductsVideo, ourProductsVideoPlayButton].forEach((el) =>
+      el.classList.toggle("hidden")
+    );
+  });
+}
