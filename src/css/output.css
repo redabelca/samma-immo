@@ -2263,10 +2263,6 @@ input:checked + .toggle-bg {
   background-size: cover;
 }
 
-.bg-contain {
-  background-size: contain;
-}
-
 .bg-center {
   background-position: center;
 }
@@ -3361,6 +3357,10 @@ li.selected {
     height: 10px;
   }
 
+  .sm\:h-\[300px\] {
+    height: 300px;
+  }
+
   .sm\:w-\[100\%\] {
     width: 100%;
   }
@@ -3512,6 +3512,10 @@ li.selected {
 
   .md\:h-\[95\%\] {
     height: 95%;
+  }
+
+  .md\:h-\[350px\] {
+    height: 350px;
   }
 
   .md\:min-h-\[450px\] {
@@ -4058,6 +4062,10 @@ li.selected {
 @media (min-width: 1280px) {
   .xl\:h-\[380px\] {
     height: 380px;
+  }
+
+  .xl\:h-\[550px\] {
+    height: 550px;
   }
 
   .xl\:max-w-\[1280px\] {
