@@ -68,24 +68,23 @@ open http://127.0.0.1:5500/src/our-products-with-map.html
 open http://127.0.0.1:5500/src/our-products-with-filter.html
 open http://127.0.0.1:5500/src/blog.html
 open http://127.0.0.1:5500/src/index.html
+open http://127.0.0.1:5500/src/index-ar.html
 
 
 FIXES
-1. [DONE] - nav items spacing 40px
-2. [DONE] - header height
-3. [DONE] - nav links hover to bold
-4. [DONE] - conatiner tight and on some screens it is full width
-6. [DONE] - Menu ne s'affiche plus
-12. [DONE] - dropdowns overlapping with below elements
-13. [DONE] - remove bg-url
-15. [DONE] - replace hero and terrain
-10. [DONE] - .2h - header video
-8. [DONE] - .5h - animation
-11. [DONE] - .5h - gallery modal + close button
-9. [DONE] - 2h - paddings / margins / heights
-  16. pdf file
-19. [DONE] - must be duplicated changes
-14. for arabic use arabic text
+[DONE] - nav items spacing 30px
+[DONE] - header height
+[DONE] - nav links hover to bold
+[DONE] - conatiner full width on some screens
+[DONE] - Menu ne s'affiche plus
+[DONE] - dropdowns overlapping
+[DONE] - remove bg-url classes
+[DONE] - replace hero header image
+[DONE] - header video
+[DONE] - animation
+[DONE] - gallery modal + close button
+[DONE] - pdf file
+[DONE] - use arabic text
 
 5. ? - Quelques remarques : popup de recherche qui déborde, le bouton fermer ne marche pas
 7. ? - On a un margin à droite qaund on ouvre le popup de recherche ------>, La marge occupe toute la partie droite de la page

@@ -2748,7 +2748,7 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
-[dir="rtl"] html, body {
+[dir="rtl"] html, [dir="rtl"] body {
   font-family: 'Tajawal', sans-serif;
 }
 
