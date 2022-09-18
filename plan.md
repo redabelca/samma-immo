@@ -86,5 +86,11 @@ FIXES
 [DONE] - pdf file
 [DONE] - use arabic text
 
-5. ? - Quelques remarques : popup de recherche qui déborde, le bouton fermer ne marche pas
-7. ? - On a un margin à droite qaund on ouvre le popup de recherche ------>, La marge occupe toute la partie droite de la page
+[DONE] - video header
+shadow
+nos produits - block height / text ikbr / padding itzad
+notre expertise
+contact title size / focus outline color
+with filter title reduce size
+gallery grid class for blue bg 
+spacing between elements

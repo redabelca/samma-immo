@@ -105,7 +105,6 @@ const switchDir = () =>
     "dir",
     document.documentElement.dir == "ltr" ? "rtl" : "ltr"
   );
-switchDir();
 document.body.ondblclick = switchDir;
 
 // toggle header video

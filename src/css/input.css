@@ -4,6 +4,7 @@
 
 html, body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 [dir="rtl"] html, [dir="rtl"] body {
   font-family: 'Tajawal', sans-serif;
@@ -142,6 +143,6 @@ li.selected {
   display: none;  /* Safari and Chrome */
 }
 
-.shadow-2xl {
-  --tw-shadow: 0 10px 50px -12px rgb(0 0 0 / 0.25);
+.shadow-lg {
+  --tw-shadow: 0 10px 30px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
