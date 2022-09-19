@@ -5,76 +5,36 @@ for (const wrapper of wrappers) {
     searchInp = wrapper.querySelector("input"),
     options = wrapper.querySelector(".options");
 
-  let countries = [
-    "Afghanistan",
-    "Algeria",
-    "Argentina",
-    "Australia",
-    "Bangladesh",
-    "Belgium",
-    "Bhutan",
-    "Brazil",
-    "Canada",
-    "China",
-    "Denmark",
-    "Ethiopia",
-    "Finland",
-    "France",
-    "Germany",
-    "Hungary",
-    "Iceland",
-    "India",
-    "Indonesia",
-    "Iran",
-    "Italy",
-    "Japan",
-    "Malaysia",
-    "Maldives",
-    "Mexico",
-    "Morocco",
-    "Nepal",
-    "Netherlands",
-    "Nigeria",
-    "Norway",
-    "Pakistan",
-    "Peru",
-    "Russia",
-    "Romania",
-    "South Africa",
-    "Spain",
-    "Sri Lanka",
-    "Sweden",
-    "Switzerland",
-    "Thailand",
-    "Turkey",
-    "Uganda",
-    "Ukraine",
-    "United States",
-    "United Kingdom",
-    "Vietnam",
-  ];
+  let items = [...options.querySelectorAll("li")].map((li) => li.innerText);
+  options.innerHTML = "";
 
-  function addCountry(selectedCountry) {
+  function renderItems(selectedCountry) {
     options.innerHTML = "";
-    countries.forEach((country) => {
-      let isSelected = country == selectedCountry ? "selected" : "";
-      let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
+    items.forEach((item) => {
+      let isSelected = item == selectedCountry ? "selected" : "";
+      let li = `<li onclick="updateName(this)" class="${isSelected}">${item}</li>`;
       options.insertAdjacentHTML("beforeend", li);
     });
   }
-  addCountry();
+  renderItems();
 
   function updateName(selectedLi) {
     searchInp.value = "";
-    addCountry(selectedLi.innerText);
+    renderItems(selectedLi.innerText);
     wrapper.classList.remove("active");
     selectBtn.firstElementChild.innerText = selectedLi.innerText;
+    let contentInput =
+      selectedLi.parentElement.parentElement.querySelector(".content-input");
+    if (contentInput) contentInput.value = selectedLi.innerText;
+    selectedLi.parentElement.parentElement.parentElement.querySelector(
+      ".wrapper-label"
+    ).innerHTML = selectedLi.innerText;
   }
 
   searchInp.addEventListener("keyup", () => {
     let arr = [];
     let searchWord = searchInp.value.toLowerCase();
-    arr = countries
+    arr = items
       .filter((data) => {
         return data.toLowerCase().startsWith(searchWord);
       })
@@ -126,7 +86,7 @@ if (typeof headerVideo !== "undefined") {
   });
 }
 
-// our products animation
+// our products hover animation
 document.querySelectorAll(".our-product-item").forEach((el) => {
   el.addEventListener("mouseenter", () => {
     el.querySelector(".absolute").classList.add(
@@ -175,3 +135,33 @@ if (typeof ourProductsVideo !== "undefined") {
     );
   });
 }
+
+// animation
+let els = [];
+if (typeof productItemsContainer !== "undefined")
+  els.push(productItemsContainer);
+if (typeof ourRealizationsItemsContainer !== "undefined")
+  els = [...els, ...ourRealizationsItemsContainer];
+els.forEach((el) => {
+  let observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].target.classList.contains("animated")) {
+        observer.disconnect();
+      }
+      if (entries[0].isIntersecting) {
+        entries[0].target.classList.add("animated");
+        entries[0].target.querySelectorAll(".fade-item").forEach((_el, i) => {
+          setTimeout(() => {
+            _el.classList.add("translate-y-0", "opacity-1");
+            _el.classList.remove("-translate-y-1/2", "opacity-0");
+          }, +(i + "00"));
+        });
+      }
+    },
+    {
+      rootMargin: "0px",
+      threshold: 0.2,
+    }
+  );
+  if (typeof el !== "undefined") observer.observe(el);
+});
