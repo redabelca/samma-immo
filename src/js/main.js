@@ -1,28 +1,28 @@
 const wrappers = document.querySelectorAll(".wrapper");
-
 for (const wrapper of wrappers) {
-  const selectBtn = wrapper.querySelector(".select-btn"),
-    searchInp = wrapper.querySelector("input"),
-    options = wrapper.querySelector(".options");
+  const selectBtn = wrapper.querySelector(".select-btn");
+  const searchInp = wrapper.querySelector("input");
+  const options = wrapper.querySelector(".options");
 
   let items = [...options.querySelectorAll("li")].map((li) => li.innerText);
   options.innerHTML = "";
 
-  function renderItems(selectedCountry) {
+  window.renderItems = (selectedCountry) => {
     options.innerHTML = "";
     items.forEach((item) => {
       let isSelected = item == selectedCountry ? "selected" : "";
       let li = `<li onclick="updateName(this)" class="${isSelected}">${item}</li>`;
       options.insertAdjacentHTML("beforeend", li);
     });
-  }
+  };
   renderItems();
 
   function updateName(selectedLi) {
-    searchInp.value = "";
+    let _wrapper = selectedLi.parentElement.parentElement.parentElement;
+    _wrapper.querySelector("input").value = "";
     renderItems(selectedLi.innerText);
-    wrapper.classList.remove("active");
-    selectBtn.firstElementChild.innerText = selectedLi.innerText;
+    _wrapper.classList.remove("active");
+    // selectBtn.firstElementChild.innerText = selectedLi.innerText;
     let contentInput =
       selectedLi.parentElement.parentElement.querySelector(".content-input");
     if (contentInput) contentInput.value = selectedLi.innerText;
@@ -154,7 +154,7 @@ els.forEach((el) => {
           setTimeout(() => {
             _el.classList.add("translate-y-0", "opacity-1");
             _el.classList.remove("-translate-y-1/2", "opacity-0");
-          }, +(i + "00"));
+          }, +(i * 3 + "00"));
         });
       }
     },
