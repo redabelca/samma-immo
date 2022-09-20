@@ -176,20 +176,29 @@ if (
   typeof ourRealizationsItemsContainer !== "undefined" &&
   typeof childrenHeightFollower !== "undefined"
 ) {
-  let height = Math.max(
-    ...[...ourRealizationsItemsContainer].map(
-      ({ clientHeight }) => clientHeight
-    )
-  );
-  document.querySelector("#childrenHeightFollower").style.height =
-    height + "px";
-  window.addEventListener("resize", () => {
-    let _height = Math.max(
-      ...[...document.querySelectorAll("#ourRealizationsItemsContainer > div")].map(
-        ({ clientHeight }) => clientHeight
-      )
+  let setHeight = (params) => {
+    let carouselSubItems = document.querySelectorAll(
+      "#ourRealizationsItemsContainer > div"
     );
+
+    carouselSubItems.forEach((el) => {
+      el.classList.toggle("h-full");
+      el.classList.toggle("h-auto");
+    });
+
+    let _height = Math.max(
+      ...[...carouselSubItems].map(({ clientHeight }) => clientHeight)
+    );
+
     document.querySelector("#childrenHeightFollower").style.height =
       _height + "px";
-  });
+
+    carouselSubItems.forEach((el) => {
+      el.classList.toggle("h-full");
+      el.classList.toggle("h-auto");
+    });
+  };
+
+  setHeight();
+  window.addEventListener("resize", setHeight);
 }
