@@ -1734,6 +1734,10 @@ input:checked + .toggle-bg {
   width: 0px;
 }
 
+.w-\[180px\] {
+  width: 180px;
+}
+
 .w-\[41px\] {
   width: 41px;
 }
@@ -1792,10 +1796,6 @@ input:checked + .toggle-bg {
 
 .w-\[23px\] {
   width: 23px;
-}
-
-.w-\[180px\] {
-  width: 180px;
 }
 
 .w-\[85\%\] {
@@ -3586,6 +3586,10 @@ li.selected {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-\[240px\] {
+    width: 240px;
   }
 
   .md\:w-\[50\%\] {
