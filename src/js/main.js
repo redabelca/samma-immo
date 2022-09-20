@@ -70,9 +70,12 @@ document.body.ondblclick = switchDir;
 // toggle header video
 if (typeof headerPlayButton !== "undefined") {
   headerPlayButton.addEventListener("click", () => {
-    [headerPlayButton, headerVideo, headerTextContent].forEach((el) =>
+    [headerPlayButton, headerTextContent].forEach((el) =>
       el.classList.toggle("hidden")
     );
+    headerVideo.classList.toggle("-z-10");
+    headerVideo.classList.toggle("z-10");
+    headerVideo.muted = true;
     headerVideo.play();
   });
 }
@@ -80,9 +83,11 @@ if (typeof headerPlayButton !== "undefined") {
 if (typeof headerVideo !== "undefined") {
   headerVideo.addEventListener("click", () => {
     headerVideo.pause();
-    [headerVideo, headerTextContent, headerPlayButton].forEach((el) =>
+    [headerTextContent, headerPlayButton].forEach((el) =>
       el.classList.toggle("hidden")
     );
+    headerVideo.classList.toggle("-z-10");
+    headerVideo.classList.toggle("z-10");
   });
 }
 

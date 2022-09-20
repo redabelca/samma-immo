@@ -1187,6 +1187,10 @@ input:checked + .toggle-bg {
   z-index: 30;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -1640,6 +1644,10 @@ input:checked + .toggle-bg {
 
 .min-h-\[400px\] {
   min-height: 400px;
+}
+
+.min-h-\[250px\] {
+  min-height: 250px;
 }
 
 .min-h-\[600px\] {
@@ -2739,10 +2747,6 @@ input:checked + .toggle-bg {
 
 .duration-700 {
   transition-duration: 700ms;
-}
-
-.duration-\[1500\] {
-  transition-duration: 1500;
 }
 
 .duration-1000 {
