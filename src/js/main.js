@@ -170,3 +170,26 @@ els.forEach((el) => {
   );
   if (typeof el !== "undefined") observer.observe(el);
 });
+
+// height follower
+if (
+  typeof ourRealizationsItemsContainer !== "undefined" &&
+  typeof childrenHeightFollower !== "undefined"
+) {
+  let height = Math.max(
+    ...[...ourRealizationsItemsContainer].map(
+      ({ clientHeight }) => clientHeight
+    )
+  );
+  document.querySelector("#childrenHeightFollower").style.height =
+    height + "px";
+  window.addEventListener("resize", () => {
+    let _height = Math.max(
+      ...[...document.querySelectorAll("#ourRealizationsItemsContainer > div")].map(
+        ({ clientHeight }) => clientHeight
+      )
+    );
+    document.querySelector("#childrenHeightFollower").style.height =
+      _height + "px";
+  });
+}

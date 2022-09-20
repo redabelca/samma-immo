@@ -1328,6 +1328,10 @@ input:checked + .toggle-bg {
   margin-top: 6rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -1422,6 +1426,10 @@ input:checked + .toggle-bg {
 
 .aspect-\[4\] {
   aspect-ratio: 4;
+}
+
+.aspect-\[1\.2\] {
+  aspect-ratio: 1.2;
 }
 
 .aspect-square {
@@ -3500,10 +3508,6 @@ li.selected {
     height: auto;
   }
 
-  .md\:h-\[300px\] {
-    height: 300px;
-  }
-
   .md\:h-\[calc\(100vh_-_170px\)\] {
     height: calc(100vh - 170px);
   }
@@ -3514,6 +3518,10 @@ li.selected {
 
   .md\:h-\[350px\] {
     height: 350px;
+  }
+
+  .md\:h-\[300px\] {
+    height: 300px;
   }
 
   .md\:h-\[250px\] {
@@ -4035,6 +4043,11 @@ li.selected {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:text-2xl {
